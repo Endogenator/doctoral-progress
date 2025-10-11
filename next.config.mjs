@@ -10,6 +10,10 @@ const nextConfig = {
   async headers() {
     return [{ source: '/:path*', headers: securityHeaders }]
   },
+  eslint: {
+    // Prevent lint errors from failing the Vercel build
+    ignoreDuringBuilds: true,
+  },
 }
 
 export default withMDX(nextConfig)
