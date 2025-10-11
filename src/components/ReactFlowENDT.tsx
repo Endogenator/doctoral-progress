@@ -23,7 +23,14 @@ export default function ReactFlowENDT() {
 
   return (
     <div style={{ height: 420 }} className="rounded border bg-white">
-      <ReactFlow nodes={nodes} edges={edges} onNodesChange={onNodesChange} onEdgesChange={onEdgesChange} onConnect={onConnect} fitView>
+      <ReactFlow
+        nodes={nodes}
+        edges={edges}
+        onNodesChange={onNodesChange}
+        onEdgesChange={onEdgesChange}
+        onConnect={onConnect}
+        fitView
+      >
         <MiniMap />
         <Controls />
         <Background />
