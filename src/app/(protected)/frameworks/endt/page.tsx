@@ -27,6 +27,33 @@ export default function ENDTPage() {
           <li><strong>I / F</strong>. Entry legibility as “student,” and exits such as graduation, certification, or exclusion.</li>
         </ul>
       </section>
+      {/* Context: why the tuple? (plain language) */}
+<section className="space-y-3 rounded-xl border border-slate-200 bg-white p-4">
+  <h3 className="text-lg font-semibold">Context: why the tuple (from automata theory)</h3>
+  <p className="text-slate-800">
+    In computer science, a <em>state machine</em> is often summarized with a compact tuple like ⟨Q, Σ, Γ, Δ⟩.
+    We borrow that notation as a <strong>legend</strong>—a short label set—so we can talk precisely about the parts of schooling
+    as a system. This is <strong>not</strong> a math requirement for readers; it’s a compact map of terms we’re using.
+  </p>
+  <ul className="list-disc pl-6 text-slate-900 space-y-1">
+    <li><strong>Q</strong>: the possible <em>states</em> a learner can be in (e.g., assimilating, bicultural, excluded).</li>
+    <li><strong>Σ</strong>: the <em>inputs/signals</em> the institution sends (task design, assessment regimes, rituals, time/space).</li>
+    <li><strong>Γ</strong>: the <em>outputs/records</em> the system emits (attendance, artifacts, refusals, scores).</li>
+    <li><strong>Δ</strong>: the <em>transitions</em>—how a learner may move from one state to another given an input.</li>
+    <li><strong>I / F</strong>: <em>entry</em> and <em>exit</em> conditions (who is legible as a “student”; who graduates, certifies, or is excluded).</li>
+  </ul>
+  <p className="text-slate-800">
+    <strong>Non-deterministic</strong> means an input doesn’t force a single outcome—<em>the same signal</em> can lead different learners
+    to different next states (because identity, prior belief, and context filter its meaning). That indeterminacy is the point of ENDT.
+  </p>
+  <div className="text-sm text-slate-700">
+    <p className="font-medium">Tiny example (words, not equations):</p>
+    <p>
+      Input Σ: “High-stakes test next week.” One student moves to a state of “focused practice,” another to “quiet withdrawal,” a third to “organized protest.”
+      Same signal, different transitions Δ → different states Q.
+    </p>
+  </div>
+</section>
 
       {/* 2) Pedagogy as identity work */}
       <section className="space-y-3">

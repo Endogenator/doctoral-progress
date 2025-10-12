@@ -46,6 +46,17 @@ export default function ReferencesPage() {
           <li>Johnson, S. (2010). <em>Where Good Ideas Come From: The Natural History of Innovation</em>. Riverhead.</li>
         </ul>
       </section>
+      <section className="space-y-4">
+  <h2 className="text-xl font-semibold">Automata & formal models (context for the tuple)</h2>
+  <ul className="list-disc pl-6 text-neutral-900 space-y-1">
+    <li>Sipser, M. (2012). <em>Introduction to the Theory of Computation</em> (3rd ed.). Cengage.  — standard overview of automata/transition systems.</li>
+    <li>Hopcroft, J. E., &amp; Ullman, J. D. (1979). <em>Introduction to Automata Theory, Languages, and Computation</em>. Addison-Wesley. — classic text on states, inputs, and transitions.</li>
+    <li>Lamport, L. (2002). <em>Specifying Systems</em>. Addison-Wesley. — practical state-machine thinking for complex systems.</li>
+  </ul>
+  <p className="text-sm text-neutral-700">
+    We adapt tuple notation from these traditions purely as a compact <em>labeling</em> device for ENDT; no prior background is required.
+  </p>
+</section>
 
       <section className="space-y-4">
         <h2 className="text-xl font-semibold">Notes</h2>
