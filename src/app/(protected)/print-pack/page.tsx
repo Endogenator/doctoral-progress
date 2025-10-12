@@ -47,30 +47,31 @@ export default function PrintPackPage() {
       </section>
 
       {/* Each section starts on a new page when printing */}
-      <section className="print-break-before rounded-xl border border-slate-200 bg-white p-6 print:border-0 print:p-0">
+      <section className="print-break-before rounded-xl border border-slate-200 bg-white p-6 print-card">
         <h2 className="text-2xl font-semibold mb-4">ENDT — Education as a Non-Deterministic Transducer</h2>
-        <div className="prose prose-slate max-w-none print:prose-p:leading-6">
+        {/* Full-width print wrapper neutralizes inner max-w + mx-auto */}
+        <div className="print-full">
           <ENDTPage />
         </div>
       </section>
 
-      <section className="print-break-before rounded-xl border border-slate-200 bg-white p-6 print:border-0 print:p-0">
+      <section className="print-break-before rounded-xl border border-slate-200 bg-white p-6 print-card">
         <h2 className="text-2xl font-semibold mb-4">XIK-TD — Experience, Identity, Knowledge</h2>
-        <div className="prose prose-slate max-w-none print:prose-p:leading-6">
+        <div className="print-full">
           <XIKTDPage />
         </div>
       </section>
 
-      <section className="print-break-before rounded-xl border border-slate-200 bg-white p-6 print:border-0 print:p-0">
+      <section className="print-break-before rounded-xl border border-slate-200 bg-white p-6 print-card">
         <h2 className="text-2xl font-semibold mb-4">Belief Space — Exploration & Focus Points</h2>
-        <div className="prose prose-slate max-w-none print:prose-p:leading-6">
+        <div className="print-full">
           <BeliefSpacePage />
         </div>
       </section>
 
-      <section className="print-break-before rounded-xl border border-slate-200 bg-white p-6 print:border-0 print:p-0">
+      <section className="print-break-before rounded-xl border border-slate-200 bg-white p-6 print-card">
         <h2 className="text-2xl font-semibold mb-4">Integration — Linking the Layers</h2>
-        <div className="prose prose-slate max-w-none print:prose-p:leading-6">
+        <div className="print-full">
           <IntegrationPage />
         </div>
       </section>

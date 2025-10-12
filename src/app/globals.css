@@ -59,4 +59,72 @@ body {
     margin: 16mm;
   }
 }
+/* ===== Print layout fixes ===== */
+@media print {
+  /* Use US Letter by default; change to A4 if you prefer */
+  @page {
+    size: Letter;
+    margin: 0.5in; /* ~12.7mm — reduces huge left margin */
+  }
+
+  /* Make the page background white for clean output */
+  html, body {
+    background: #fff !important;
+    color: #111 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Hide sidebar and any sticky chrome */
+  aside, nav[aria-label="Sidebar"], #sidebar-nav {
+    display: none !important;
+  }
+
+  /* Expand main/content to full width; remove padding that causes clipping */
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Neutralize Tailwind max-w and centering from inner pages */
+  .print-full,
+  .max-w-4xl,
+  .max-w-5xl,
+  .max-w-6xl,
+  .prose {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  .mx-auto {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* Remove card borders/padding to avoid clipping at page edges */
+  .print-card {
+    border: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+  }
+
+  /* Ensure tables and images don't overflow */
+  table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+  }
+  img, svg, video, canvas {
+    max-width: 100% !important;
+    height: auto !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Gentle page breaks */
+  .print-break-before {
+    break-before: page;
+    page-break-before: always;
+  }
+}
 
