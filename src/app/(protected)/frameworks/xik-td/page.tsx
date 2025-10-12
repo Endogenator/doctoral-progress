@@ -124,53 +124,52 @@ export default function XIKTDPage() {
         </p>
       </section>
 
-      {/* 6) Worked example: electricity → computation */}
+      {/* 6) Worked example: education → skills attainment → entrepreneurship */}
 <section className="space-y-3">
-  <h2 className="text-xl font-semibold">6) Worked example: electricity → computation</h2>
+  <h2 className="text-xl font-semibold">6) Worked example: education → skills attainment → entrepreneurship</h2>
 
   <p className="text-neutral-800">
-    Beliefs around electricity often stabilize in a purely physical frame. When we add a predicate-logic frame
-    (truth tables, Boolean operators), a new class of models becomes visible: circuits as computations.
-    The “matchup” between voltage levels and Boolean values changes the reachable knowledge.
+    A common belief is that the safe path is a linear sequence of credentials that unlock “good jobs.”
+    For many learners—especially those facing identity pressure, thin networks, or time debt—this frame hides viable
+    skill-first and entrepreneurial options. When we add a constructor/skills frame (reliable methods, proof-of-work)
+    and a venture frame (small bets, customers, revenue), new trajectories become visible.
   </p>
 
   <div className="overflow-x-auto">
     <table className="w-full text-sm border border-neutral-200">
       <thead>
         <tr className="bg-neutral-50 text-neutral-900">
-          <th className="p-2 text-left border-b w-1/2">Frame A. Physical electricity</th>
-          <th className="p-2 text-left border-b w-1/2">Frame B. Predicate logic / computation</th>
+          <th className="p-2 text-left border-b w-1/2">Frame A. Credential-first labor market</th>
+          <th className="p-2 text-left border-b w-1/2">Frame B. Skills/constructor-first + entrepreneurship</th>
         </tr>
       </thead>
       <tbody className="text-neutral-900">
         <tr>
           <td className="p-2 border-t">
-            <strong>Objects</strong>: battery, wires, bulb, resistor, current, voltage.<br />
-            <strong>Invariants</strong>: charge conservation in closed loops; KCL/KVL as constraints.<br />
-            <strong>Methods</strong>: build series/parallel, measure with meter, V–I graphs.
+            <strong>Objects</strong>: degrees, majors, GPA, prestige signals.<br />
+            <strong>Invariants</strong>: screening by credential; internships as gatekeeping.<br />
+            <strong>Methods</strong>: accumulate credits; pass high-stakes exams; apply through portals.
           </td>
           <td className="p-2 border-t">
-            <strong>Objects</strong>: propositions, bits, logic gates, truth values.<br />
-            <strong>Invariants</strong>: Boolean algebra; deterministic gate tables.<br />
-            <strong>Methods</strong>: define truth tables, compose gates, reason about functions.
-          </td>
-        </tr>
-        <tr>
-          <td className="p-2 border-t">
-            <strong>What you can see</strong>: brightness vs. resistance; current splits at junctions;
-            non-ohmic behavior at limits.
-          </td>
-          <td className="p-2 border-t">
-            <strong>What you can see</strong>: circuits implement functions f: {`{0,1}^n → {0,1}`} ;
-            composition yields adders, comparators, finite-state controllers.
+            <strong>Objects</strong>: constructors (reliable methods), portfolio artifacts, customers, revenue.<br />
+            <strong>Invariants</strong>: skill reliability; value delivered; proof-of-work signals.<br />
+            <strong>Methods</strong>: scope a problem; ship; measure; iterate; document reliability.
           </td>
         </tr>
         <tr>
           <td className="p-2 border-t">
-            <strong>Limits</strong>: knowledge clusters around materials and energy flow.
+            <strong>What you can see</strong>: rank → internship → entry role. Exclusion when rank/network is thin.
           </td>
           <td className="p-2 border-t">
-            <strong>Limits</strong>: needs a physical encoding of 0/1 and noise margins to be valid.
+            <strong>What you can see</strong>: paid micro-projects, micro-ventures, apprenticeships, co-ops; lateral entry via portfolio.
+          </td>
+        </tr>
+        <tr>
+          <td className="p-2 border-t">
+            <strong>Hidden costs</strong>: debt, delay, translation tax (fitting lived skill into formal signals).
+          </td>
+          <td className="p-2 border-t">
+            <strong>Constraints</strong>: capital access, credibility gap, time scarcity. Needs lightweight finance and mentors.
           </td>
         </tr>
       </tbody>
@@ -178,30 +177,31 @@ export default function XIKTDPage() {
   </div>
 
   <div className="space-y-2 text-neutral-900">
-    <p><strong>Bridge constructor</strong> (makes the matchup explicit):</p>
+    <p><strong>Bridge constructor</strong> (aligns frames so new paths are reachable):</p>
     <ol className="list-decimal pl-6 space-y-1">
-      <li>Choose a voltage threshold to encode <em>0</em> and <em>1</em> (for example, below V<sub>T</sub> = 1.0V is 0, at or above is 1).</li>
-      <li>Build a switch-based circuit and record a two-column truth table: input state → lamp on/off.</li>
-      <li>Generalize to two inputs with a simple AND circuit; fill the 4-row truth table.</li>
-      <li>Show equivalence: physical wiring pattern ↔ Boolean operator (series = AND, parallel = OR, inverter = NOT).</li>
-      <li>Compose blocks to implement a 1-bit half-adder. Verify with a meter and with the truth table.</li>
-      <li>State validity conditions: thresholds, power limits, timing, fan-out. Note failure modes as learning data.</li>
+      <li>Pick a local need; write a one-page scope (who, pain, success signal, risks).</li>
+      <li>Define the <em>constructor recipe</em>: steps, checks, failure modes for the core skill you’ll deliver.</li>
+      <li>Ship a <em>minimum reliable</em> artifact in one week; collect a customer quote or usage metric.</li>
+      <li>Publish a proof-of-work entry: before/after, method, reliability evidence, and limits.</li>
+      <li>Price a follow-on (small bet), or convert to an apprenticeship/retainer; log revenue or hours.</li>
+      <li>State validity conditions (what kinds of problems this method solves) and the next adjacent move.</li>
     </ol>
   </div>
 
   <div className="space-y-2 text-neutral-900">
     <p><strong>Expected migration</strong>:</p>
     <ul className="list-disc pl-6 space-y-1">
-      <li>From a <em>Fixive Belief</em> that “electricity is just energy for bulbs” to a <em>Simulactive</em> model that previews gate behavior.</li>
-      <li>Toward a <em>Causactive</em> model that explains how composition of gates yields computation.</li>
+      <li>From a <em>Fixive Belief</em> that “the degree is the gate” to a <em>Simulactive</em> model that previews skill → customer pathways.</li>
+      <li>Toward a <em>Causactive</em> model explaining how reliable methods + proof-of-work + small bets create income and options.</li>
     </ul>
   </div>
 
   <p className="text-neutral-800">
-    <strong>Transfer check</strong>: predict outputs of a new gate network using only its truth tables,
-    then build and measure. Explain mismatches without changing frames unless evidence requires it.
+    <strong>Transfer check</strong>: given a new field (e.g., data cleanup for a nonprofit), build a one-week scope, ship a minimum reliable artifact,
+    and secure either a testimonial or a paid extension. Explain mismatches and revise the recipe rather than abandoning the frame.
   </p>
 </section>
+
 
 
       {/* 7) Formalization roadmap */}

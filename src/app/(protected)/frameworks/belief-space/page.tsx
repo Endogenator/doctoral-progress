@@ -175,13 +175,13 @@ export default function BeliefSpacePage() {
         </p>
       </section>
 
-      {/* 9) Worked example. Electricity → electronics → computation */}
+      {/* 9) Worked example. Credential paths ↔ skill/venture paths */}
 <section className="space-y-3">
-  <h2 className="text-xl font-semibold">9) Worked example. Electricity → electronics → computation</h2>
+  <h2 className="text-xl font-semibold">9) Worked example. Credential paths ↔ skill/venture paths</h2>
   <p className="text-neutral-800">
-    Without a logic frame, beliefs about electricity cluster around physical properties only. When a community adopts
-    a shared encoding of Boolean values in voltage levels, new <em>focus points</em> appear and trajectories open toward
-    electronics and computing. The key is the alignment between physical invariants and truth-table invariants.
+    In a credential-first community, belief space stabilizes around prestige signals and GPA. When a community adopts
+    shared anchors for proof-of-work and constructor reliability, new focus points appear and trajectories open toward
+    entrepreneurship and lateral entry—especially for learners excluded by rank or network.
   </p>
 
   <div className="overflow-x-auto">
@@ -196,44 +196,48 @@ export default function BeliefSpacePage() {
       </thead>
       <tbody className="text-neutral-900">
         <tr>
-          <td className="p-2 border-t"><strong>Voltage as truth value</strong></td>
-          <td className="p-2 border-t">Clear thresholds and noise margins; stable supply; limited fan-out.</td>
-          <td className="p-2 border-t">Map simple switch circuits to NOT, AND, OR truth tables.</td>
-          <td className="p-2 border-t">If thresholds drift, revert to physical analysis and re-establish margins.</td>
+          <td className="p-2 border-t"><strong>Proof-of-work as signal</strong></td>
+          <td className="p-2 border-t">Clear artifact, observable reliability, third-party testimonial or usage.</td>
+          <td className="p-2 border-t">Add one new customer or user; turn a class project into a paid micro-project.</td>
+          <td className="p-2 border-t">If credibility stalls, pair with a mentor or co-brand; add before/after metrics.</td>
         </tr>
         <tr>
-          <td className="p-2 border-t"><strong>Gate composition = function composition</strong></td>
-          <td className="p-2 border-t">Deterministic gate behavior; predictable propagation delay.</td>
-          <td className="p-2 border-t">Build a half-adder from gates; verify with a 4-row table.</td>
-          <td className="p-2 border-t">If timing glitches, use physical frame to add buffering or adjust loads.</td>
+          <td className="p-2 border-t"><strong>Constructor reliability</strong></td>
+          <td className="p-2 border-t">Method published with steps, checks, failure modes; reproducible by another.</td>
+          <td className="p-2 border-t">Teach the recipe to a peer; log their result; refine failure modes.</td>
+          <td className="p-2 border-t">If transfer fails, narrow scope; add a pre-flight checklist to reduce load.</td>
         </tr>
         <tr>
-          <td className="p-2 border-t"><strong>Finite state with memory</strong></td>
-          <td className="p-2 border-t">Edge-triggered elements defined; clock integrity.</td>
-          <td className="p-2 border-t">Construct a one-bit register; extend to a simple counter.</td>
-          <td className="p-2 border-t">If metastability appears, analyze setup/hold in the physical frame.</td>
+          <td className="p-2 border-t"><strong>Small-bet venture</strong></td>
+          <td className="p-2 border-t">Tiny scope, capped risk, time-boxed to one week, explicit success signal.</td>
+          <td className="p-2 border-t">Pilot a $100-$500 engagement; or barter for a high-cred testimonial.</td>
+          <td className="p-2 border-t">If capital blocks, switch to pre-sales or grant micro-funding; keep the bet small.</td>
+        </tr>
+        <tr>
+          <td className="p-2 border-t"><strong>Competency transcript</strong></td>
+          <td className="p-2 border-t">Portfolio mapped to constructors; each with evidence and limits.</td>
+          <td className="p-2 border-t">Convert two class artifacts to constructor entries; add usage evidence.</td>
+          <td className="p-2 border-t">If HR portals require degrees, route via apprenticeship, vendor marketplace, or client intro.</td>
         </tr>
       </tbody>
     </table>
   </div>
 
   <div className="space-y-2 text-neutral-900">
-    <p><strong>Constructor recipe to align frames</strong>:</p>
+    <p><strong>Constructor to align frames</strong> (community-level):</p>
     <ol className="list-decimal pl-6 space-y-1">
-      <li>Declare an encoding: V &lt; V<sub>T</sub> = 0 and V ≥ V<sub>T</sub> = 1. Note margins.</li>
-      <li>Translate a wiring pattern into a truth table (series → AND, parallel → OR, inverter → NOT).</li>
-      <li>Compose gates and compute the table of the composite function.</li>
-      <li>Build the circuit, measure key nodes, and annotate mismatches with physical causes.</li>
-      <li>State where the model holds and where it breaks. Record the next adjacent move.</li>
+      <li>Publish a common template for proof-of-work (scope, method, evidence, limits, testimonial).</li>
+      <li>Run monthly showcase sessions where peers and mentors validate one constructor each.</li>
+      <li>Track adjacent moves: <em>new customer</em>, <em>new method</em>, or <em>new domain</em> at small scale.</li>
     </ol>
   </div>
 
   <p className="text-neutral-800">
-    <strong>Belief space outcome</strong>: the community now shares new focus points and language
-    (gate, threshold, truth table, state), enabling trajectories into digital electronics and computer architecture.
-    Individual reference frames remain subjective but can align around these shared anchors.
+    <strong>Belief space outcome</strong>: the community now shares anchors—proof-of-work, constructor reliability, small bets, competency transcript—
+    that make skill-first and entrepreneurial paths legible and reachable for marginalized learners.
   </p>
 </section>
+
 
       {/* 10) Anchor line */}
       <section className="space-y-1">

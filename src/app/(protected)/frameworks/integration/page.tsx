@@ -88,15 +88,60 @@ export default function IntegrationPage() {
         </p>
       </section>
 
-      {/* 4) Example: electricity → computation as a stitched design */}
-      <section className="space-y-3">
-        <h2 className="text-xl font-semibold">4) Example: electricity → computation (stitched)</h2>
-        <ul className="list-disc pl-6 space-y-2 text-neutral-900">
-          <li><strong>ENDT</strong>: replace single-shot labs with adjacent-possible sequences that culminate in gate composition; publish portfolio exits.</li>
-          <li><strong>XIK-TD</strong>: teach a voltage↔truth-value encoding; constructor recipes for NOT, AND, OR; compose a half-adder; predict via tables, then build.</li>
-          <li><strong>Belief Space</strong>: add new focus points (threshold, truth table, state); log counter-examples; state validity conditions and next adjacent move.</li>
-        </ul>
-      </section>
+      {/* 4) Example: credential-first → skills/entrepreneurship (stitched design) */}
+<section className="space-y-3">
+  <h2 className="text-xl font-semibold">4) Example: credential-first → skills/entrepreneurship (stitched)</h2>
+
+  <p className="text-neutral-800">
+    We redesign one program strand so learners—especially those excluded by rank, networks, or time debt—can
+    reach paid work or a micro-venture via constructors (reliable methods) and proof-of-work, without abandoning degrees.
+  </p>
+
+  <div className="rounded-xl border border-slate-200 p-4 bg-white">
+    <h3 className="font-semibold mb-2">System layer — ENDT (change the signal architecture)</h3>
+    <ul className="list-disc pl-6 text-neutral-900 space-y-2">
+      <li><strong>Replace one capstone</strong> with a 4-week sequence of <em>adjacent small bets</em> (time-boxed micro-projects with explicit success signals).</li>
+      <li><strong>Authorize portfolio exits</strong>: competency transcript mapped to constructors (steps, checks, failure modes, limits) + third-party evidence.</li>
+      <li><strong>Create lanes</strong>: micro-grants (materials/hosting), apprenticeship credits, and vendor/marketplace listings for lateral entry.</li>
+      <li><strong>Assessment shift</strong>: grade on method reliability, transfer under a frame shift, and documented equity counter-moves (see below).</li>
+      <li><strong>Gatekeeping fix</strong>: accept <em>proof-of-work</em> in lieu of prestige internship for program requirements where lawful.</li>
+    </ul>
+  </div>
+
+  <div className="rounded-xl border border-slate-200 p-4 bg-white">
+    <h3 className="font-semibold mb-2">Learner loop — XIK-TD (make the path doable)</h3>
+    <ul className="list-disc pl-6 text-neutral-900 space-y-2">
+      <li><strong>Teach the proof-of-work recipe</strong>: scope (who/pain/success/risks) → constructor steps & checks → ship minimum reliable → capture evidence.</li>
+      <li><strong>Identity & time costs visible</strong>: private previews, flexible deadlines, and a “changed-my-mind” note to normalize revision.</li>
+      <li><strong>Revenue or testimonial</strong> target: one paid micro-engagement (e.g., $100–$500) or a high-credibility testimonial in 4 weeks.</li>
+      <li><strong>Transfer check</strong>: replicate the method in a new domain (nonprofit, local business, campus unit) and log what held vs. broke.</li>
+    </ul>
+  </div>
+
+  <div className="rounded-xl border border-slate-200 p-4 bg-white">
+    <h3 className="font-semibold mb-2">Shared field — Belief Space (stabilize community anchors)</h3>
+    <ul className="list-disc pl-6 text-neutral-900 space-y-2">
+      <li><strong>Publish anchors</strong>: proof-of-work template, constructor cards, and a competency transcript format.</li>
+      <li><strong>Monthly showcases</strong>: peers + mentors validate one constructor each (evidence + limits), reducing the credibility gap.</li>
+      <li><strong>Language shift</strong>: adopt terms like <em>small bet</em>, <em>adjacent move</em>, <em>escape hatch</em> to normalize iterative progress.</li>
+    </ul>
+  </div>
+
+  <div className="rounded-xl border border-indigo-100 bg-indigo-50 p-4">
+    <h3 className="font-semibold mb-2">Equity levers (designed counter-moves)</h3>
+    <ul className="list-disc pl-6 text-neutral-900 space-y-1">
+      <li><strong>Translation tax</strong> → provide co-branding/templates; staff converts artifacts to employer-legible language.</li>
+      <li><strong>Credibility gap</strong> → mentor signatures on constructor cards; public rubrics for what counts as “reliable.”</li>
+      <li><strong>Capital access</strong> → micro-grants, pre-sales, or barter-for-testimonial options to start.</li>
+      <li><strong>Time debt</strong> → in-class build time, predictable weekly cadence, and optional partner work.</li>
+    </ul>
+  </div>
+
+  <p className="text-neutral-800">
+    <strong>Outcome</strong>: degrees stay available, but learners also get legible, low-cost on-ramps to paid work or micro-ventures.
+    The system changes signals (ENDT), the learner loop becomes feasible (XIK-TD), and the community stabilizes new focus points (Belief Space).
+  </p>
+</section>
 
       {/* 5) Accountability without premature metrics */}
       <section className="space-y-3">
