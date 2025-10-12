@@ -31,4 +31,32 @@ body {
   h3 { @apply text-slate-900; }
   h4 { @apply text-slate-900; }
 }
+/* Print layout */
+@media print {
+  /* Hide sidebar entirely on protected pages */
+  aside, nav[aria-label="Sidebar"], #sidebar-nav { display: none !important; }
+
+  /* Make the main area use full width */
+  main { padding: 0 !important; }
+
+  /* Remove rounded borders/backgrounds that can waste ink or clip */
+  .print\:border-0 { border-width: 0 !important; }
+  .print\:p-0 { padding: 0 !important; }
+  .print\:bg-white { background-color: #fff !important; }
+
+  /* Tighter line-height for paragraphs in print */
+  .print\:prose-p\:leading-6 p { line-height: 1.5 !important; }
+
+  /* Force page breaks before sections */
+  .print-break-before {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  /* Page margins */
+  @page {
+    size: A4; /* or 'Letter' if you prefer */
+    margin: 16mm;
+  }
+}
 
