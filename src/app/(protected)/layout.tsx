@@ -17,9 +17,9 @@ export default async function ProtectedLayout({ children }: { children: React.Re
   }
 
   return (
-    <div className="min-h-[calc(100vh-4rem)] grid grid-cols-1 md:grid-cols-[240px_minmax(0,1fr)]">
+    <div className="min-h-[calc(100vh-4rem)] grid grid-cols-1 md:grid-cols-[240px_minmax(0,1fr)] bg-neutral-50 text-neutral-900">
       <Sidebar />
-      <main className="p-6">{children}</main>
+      <main className="p-6 bg-white">{children}</main>
     </div>
   )
 }
