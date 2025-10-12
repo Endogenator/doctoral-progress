@@ -1,25 +1,44 @@
-export const dynamic = 'force-dynamic';
-
 import { currentUser } from '@clerk/nextjs/server'
-import Link from 'next/link'
 import Sidebar from './_components/Sidebar'
 
-export default async function ProtectedLayout({ children }: { children: React.ReactNode }) {
+export default async function ProtectedLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   const user = await currentUser()
+
   if (!user) {
     return (
-      <main className="p-8 max-w-md mx-auto">
-        <h1 className="text-2xl font-semibold mb-4">Sign in required</h1>
-        <p className="mb-4">This area is private. Please sign in.</p>
-        <Link className="underline" href="/sign-in">Go to sign in</Link>
-      </main>
+      <div className="min-h-screen flex items-center justify-center p-8">
+        <div className="max-w-md text-center space-y-4">
+          <h1 className="text-2xl font-semibold">Sign-in required</h1>
+          <p className="text-slate-700">
+            You need to be signed in to view this content.
+          </p>
+          <a
+            href="/sign-in"
+            className="inline-block rounded-md bg-indigo-600 px-4 py-2 text-white"
+          >
+            Go to sign in
+          </a>
+        </div>
+      </div>
     )
   }
 
   return (
-    <div className="min-h-[calc(100vh-4rem)] grid grid-cols-1 md:grid-cols-[240px_minmax(0,1fr)] bg-neutral-50 text-neutral-900">
-      <Sidebar />
-      <main className="p-6 bg-white">{children}</main>
+    // Light gradient adds color without hurting readability
+    <div className="md:flex md:min-h-screen bg-gradient-to-br from-slate-50 via-indigo-50 to-slate-100">
+      <div className="md:w-64 md:flex-shrink-0">
+        <Sidebar />
+      </div>
+
+      <main className="flex-1 p-6">
+        <div className="mx-auto max-w-5xl">
+          {children}
+        </div>
+      </main>
     </div>
   )
 }

@@ -1,27 +1,33 @@
+import { type Metadata } from 'next'
+import { ClerkProvider } from '@clerk/nextjs'
+import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
-import {
-  ClerkProvider,
-  SignedIn, SignedOut, SignInButton, SignUpButton, UserButton,
-} from '@clerk/nextjs'
 
-export const metadata = {
+const geistSans = Geist({
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
+})
+
+const geistMono = Geist_Mono({
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
+})
+
+export const metadata: Metadata = {
   title: 'Doctoral Progress',
-  description: 'Private research hub',
+  description: 'Private workspace for ENDT, XIK-TD, and Belief Space',
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <ClerkProvider>
-      <html lang="en" className="bg-neutral-50">
-        <head>
-          {/* Force light color scheme so OS dark mode or extensions don’t invert */}
-          <meta name="color-scheme" content="light" />
-        </head>
-        <body className="min-h-screen bg-neutral-50 text-neutral-900">
-          <header className="flex justify-end items-center p-4 gap-3 border-b bg-white">
-            <SignedOut><SignInButton /><SignUpButton /></SignedOut>
-            <SignedIn><UserButton /></SignedIn>
-          </header>
+      <html lang="en">
+        {/* Soft colored background, high-contrast text, no top banner */}
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-50 text-slate-900`}
+        >
           {children}
         </body>
       </html>
