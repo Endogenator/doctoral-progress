@@ -32,9 +32,12 @@ const cards = [
 
 const nextActions = [
   'Add “Methods” subpage for I(·), X(·), B(·) with simple diagrams.',
-  'Draft study design: electricity→computation sequence, outcomes, and logs.',
-  'Decide evidence lines we can collect now without overclaiming.'
+  'Pilot a 4-week skills/entrepreneurship sequence (adjacent small bets); define outcomes & logging.',
+  'Embed an Equity levers box across pages; draft micro-grant & apprenticeship lanes.',
+  'Add a private feedback form (Clerk-gated) and optional webhook for sign-ups/sessions.',
+  'Decide immediate evidence lines (proof-of-work, constructor reliability, adjacent moves) without overclaiming.',
 ]
+
 
 export default function DashboardPage() {
   return (
