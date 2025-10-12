@@ -1,5 +1,8 @@
+export const dynamic = 'force-dynamic';
+
 import { currentUser } from '@clerk/nextjs/server'
 import Link from 'next/link'
+import Sidebar from './_components/Sidebar'
 
 export default async function ProtectedLayout({ children }: { children: React.ReactNode }) {
   const user = await currentUser()
@@ -12,5 +15,11 @@ export default async function ProtectedLayout({ children }: { children: React.Re
       </main>
     )
   }
-  return <>{children}</>
+
+  return (
+    <div className="min-h-[calc(100vh-4rem)] grid grid-cols-1 md:grid-cols-[240px_minmax(0,1fr)]">
+      <Sidebar />
+      <main className="p-6">{children}</main>
+    </div>
+  )
 }
