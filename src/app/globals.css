@@ -1,73 +1,45 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/* ------------------------------------------
+   Base theme hooks (kept minimal)
+------------------------------------------ */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Use the fonts you configured in layout.tsx */
+body {
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system,
+    Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-/* --- Headings: force high-contrast color site-wide --- */
+/* ------------------------------------------
+   Headings (high contrast + forest-green subheads)
+------------------------------------------ */
 @layer base {
   h1 { @apply text-slate-900; }
-  h2 { @apply text-slate-900; }
-  h3 { @apply text-slate-900; }
+  h2 { @apply text-emerald-800; } /* forest vibe */
+  h3 { @apply text-emerald-900; } /* slightly darker */
   h4 { @apply text-slate-900; }
 }
-/* Print layout */
-@media print {
-  /* Hide sidebar entirely on protected pages */
-  aside, nav[aria-label="Sidebar"], #sidebar-nav { display: none !important; }
 
-  /* Make the main area use full width */
-  main { padding: 0 !important; }
-
-  /* Remove rounded borders/backgrounds that can waste ink or clip */
-  .print\:border-0 { border-width: 0 !important; }
-  .print\:p-0 { padding: 0 !important; }
-  .print\:bg-white { background-color: #fff !important; }
-
-  /* Tighter line-height for paragraphs in print */
-  .print\:prose-p\:leading-6 p { line-height: 1.5 !important; }
-
-  /* Force page breaks before sections */
-  .print-break-before {
-    break-before: page;
-    page-break-before: always;
-  }
-
-  /* Page margins */
-  @page {
-    size: A4; /* or 'Letter' if you prefer */
-    margin: 16mm;
-  }
+/* Optional utility to force a green subheading on specific elements */
+@layer components {
+  .subheading { @apply text-emerald-800; }
 }
-/* ===== Print layout fixes ===== */
+
+/* ------------------------------------------
+   Print: consolidated, no clipping, centered
+------------------------------------------ */
 @media print {
-  /* Use US Letter by default; change to A4 if you prefer */
+  /* Page size & margins (set to Letter; switch to A4 if preferred) */
   @page {
     size: Letter;
-    margin: 0.5in; /* ~12.7mm — reduces huge left margin */
+    margin: 0.5in; /* ~12.7mm */
   }
 
-  /* Make the page background white for clean output */
+  /* Ensure light background and strong text in print */
   html, body {
     background: #fff !important;
     color: #111 !important;
@@ -75,12 +47,12 @@ body {
     print-color-adjust: exact;
   }
 
-  /* Hide sidebar and any sticky chrome */
+  /* Hide sidebar and any sticky nav chrome */
   aside, nav[aria-label="Sidebar"], #sidebar-nav {
     display: none !important;
   }
 
-  /* Expand main/content to full width; remove padding that causes clipping */
+  /* Make the main area full width (prevent right-edge cutoff) */
   main {
     padding: 0 !important;
     margin: 0 !important;
@@ -88,7 +60,7 @@ body {
     max-width: 100% !important;
   }
 
-  /* Neutralize Tailwind max-w and centering from inner pages */
+  /* Neutralize Tailwind max widths and centering from inner pages */
   .print-full,
   .max-w-4xl,
   .max-w-5xl,
@@ -102,14 +74,14 @@ body {
     margin-right: 0 !important;
   }
 
-  /* Remove card borders/padding to avoid clipping at page edges */
+  /* Remove card borders/padding that can clip near page edges */
   .print-card {
     border: 0 !important;
     padding: 0 !important;
     background: #fff !important;
   }
 
-  /* Ensure tables and images don't overflow */
+  /* Ensure tables/media do not overflow and don’t get split badly */
   table {
     width: 100% !important;
     border-collapse: collapse !important;
@@ -121,10 +93,12 @@ body {
     break-inside: avoid;
   }
 
-  /* Gentle page breaks */
+  /* Gentle page breaks before major sections */
   .print-break-before {
     break-before: page;
     page-break-before: always;
   }
-}
 
+  /* Tighter paragraph line-height in print if needed */
+  .print\:prose-p\:leading-6 p { line-height: 1.5 !important; }
+}

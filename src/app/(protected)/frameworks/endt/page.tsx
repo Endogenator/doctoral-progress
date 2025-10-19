@@ -1,111 +1,150 @@
 'use client'
 
+/**
+ * ENDT — Education as a Non-Deterministic Transducer
+ * Notes:
+ * - No em dashes
+ * - Plain-language tuple context
+ * - Externalities foregrounded
+ * - Practical levers emphasize reference-frame training
+ * - Cross-links to XIK-TD and Belief Space
+ */
+
 export default function ENDTPage() {
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
-      <header className="space-y-2">
-        <h1 className="text-3xl font-semibold">ENDT — Education as a Non-Deterministic Transducer</h1>
-        <p className="text-neutral-800">
-          ENDT treats schooling as an engine that transduces institutional signals into student states and social records.
-          The same signal can send different students down different paths, so the system is non-deterministic.
-          That indeterminacy is the interface where policy, pedagogy, identity, and power meet.
+    <div className="max-w-5xl mx-auto space-y-8">
+      {/* Header */}
+      <section className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8 shadow-sm">
+        <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
+          ENDT — Education as a Non-Deterministic Transducer
+        </h1>
+        <p className="mt-3 text-lg text-slate-800">
+          ENDT treats schooling as an engine that transduces institutional signals into student states and social
+          records. The same signal can send different students down different paths, so the system is non-deterministic.
+          That indeterminacy sits where policy, pedagogy, identity, and power meet.
         </p>
-      </header>
+        <p className="mt-2 text-slate-800 text-sm">
+          We use a short tuple ⟨Q, Σ, Γ, Δ, I, F⟩ as a compact legend to name the parts of the system. It is a map of
+          terms, not a math requirement for readers.
+        </p>
+      </section>
 
       {/* 1) Model at a glance */}
-      <section className="space-y-3">
-        <h2 className="text-xl font-semibold">1) Model at a glance</h2>
-        <p className="text-neutral-800">
-          We use short labels to describe parts of the system. Read <strong>E = ⟨Q, Σ, Γ, Δ, I, F⟩</strong> as a compact legend
-          that helps us talk precisely, not as a formal proof.
-        </p>
-        <ul className="list-disc pl-6 space-y-1 text-neutral-900">
-          <li><strong>Q (states)</strong>. Positions that couple knowledge with identity, for example assimilating, bicultural, segregated, certified, excluded.</li>
-          <li><strong>Σ (inputs)</strong>. Policy and pedagogy signals, for example task design, assessment regimes, discipline, rituals, and use of time and space.</li>
-          <li><strong>Γ (outputs)</strong>. Records and behaviors, for example attendance, artifacts, participation, refusals, petitions, walkouts, and scores.</li>
-          <li><strong>Δ (transitions)</strong>. The step from one state to the next where the same input can lead to multiple outcomes.</li>
-          <li><strong>I / F</strong>. Entry legibility as “student,” and exits such as graduation, certification, or exclusion.</li>
-        </ul>
+      <section className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
+        <h2 className="text-2xl font-semibold">1) Model at a glance</h2>
+        <div className="mt-4 grid md:grid-cols-2 gap-6">
+          <div className="rounded-2xl border border-slate-200 p-4">
+            <ul className="list-disc pl-5 space-y-2 text-slate-800">
+              <li>
+                <span className="font-medium">Q (states)</span>. Positions that couple knowledge with identity for
+                example assimilating, bicultural, segregated, certified, excluded.
+              </li>
+              <li>
+                <span className="font-medium">Σ (inputs)</span>. Policy and pedagogy signals for example task design,
+                assessment regimes, discipline, rituals, and use of time and space.
+              </li>
+              <li>
+                <span className="font-medium">Γ (outputs)</span>. Records and behaviors for example attendance,
+                artifacts, participation, refusals, petitions, walkouts, and scores.
+              </li>
+              <li>
+                <span className="font-medium">Δ (transitions)</span>. The step from one state to the next where the same
+                input can lead to multiple outcomes.
+              </li>
+              <li>
+                <span className="font-medium">I / F</span>. Entry legibility as student and exits such as graduation,
+                certification, or exclusion.
+              </li>
+            </ul>
+          </div>
+
+          {/* Context card */}
+          <div className="rounded-2xl border border-slate-200 p-4 bg-slate-50">
+            <h3 className="text-lg font-semibold">Context: why the tuple</h3>
+            <p className="mt-2 text-slate-800">
+              In computer science, a state machine is often summarized with a compact tuple like ⟨Q, Σ, Γ, Δ⟩. We borrow
+              that notation as a legend so we can talk precisely about the parts of schooling as a system. The point of
+              ENDT is the indeterminacy: the same input does not force one outcome because identity, prior belief, and
+              context filter its meaning.
+            </p>
+            <p className="mt-3 text-sm text-slate-700">
+              Tiny example: Input Σ is a high stakes test next week. One student moves to focused practice, another to
+              quiet withdrawal, a third to organized protest. Same signal, different transitions Δ, different states Q.
+            </p>
+          </div>
+        </div>
       </section>
-      {/* Context: why the tuple? (plain language) */}
-<section className="space-y-3 rounded-xl border border-slate-200 bg-white p-4">
-  <h3 className="text-lg font-semibold">Context: why the tuple (from automata theory)</h3>
-  <p className="text-slate-800">
-    In computer science, a <em>state machine</em> is often summarized with a compact tuple like ⟨Q, Σ, Γ, Δ⟩.
-    We borrow that notation as a <strong>legend</strong>—a short label set—so we can talk precisely about the parts of schooling
-    as a system. This is <strong>not</strong> a math requirement for readers; it’s a compact map of terms we’re using.
-  </p>
-  <ul className="list-disc pl-6 text-slate-900 space-y-1">
-    <li><strong>Q</strong>: the possible <em>states</em> a learner can be in (e.g., assimilating, bicultural, excluded).</li>
-    <li><strong>Σ</strong>: the <em>inputs/signals</em> the institution sends (task design, assessment regimes, rituals, time/space).</li>
-    <li><strong>Γ</strong>: the <em>outputs/records</em> the system emits (attendance, artifacts, refusals, scores).</li>
-    <li><strong>Δ</strong>: the <em>transitions</em>—how a learner may move from one state to another given an input.</li>
-    <li><strong>I / F</strong>: <em>entry</em> and <em>exit</em> conditions (who is legible as a “student”; who graduates, certifies, or is excluded).</li>
-  </ul>
-  <p className="text-slate-800">
-    <strong>Non-deterministic</strong> means an input doesn’t force a single outcome—<em>the same signal</em> can lead different learners
-    to different next states (because identity, prior belief, and context filter its meaning). That indeterminacy is the point of ENDT.
-  </p>
-  <div className="text-sm text-slate-700">
-    <p className="font-medium">Tiny example (words, not equations):</p>
-    <p>
-      Input Σ: “High-stakes test next week.” One student moves to a state of “focused practice,” another to “quiet withdrawal,” a third to “organized protest.”
-      Same signal, different transitions Δ → different states Q.
-    </p>
-  </div>
-</section>
 
       {/* 2) Pedagogy as identity work */}
-      <section className="space-y-3">
-        <h2 className="text-xl font-semibold">2) Pedagogy as identity work</h2>
-        <p className="text-neutral-800">
+      <section className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
+        <h2 className="text-2xl font-semibold">2) Pedagogy as identity work</h2>
+        <p className="mt-2 text-slate-800">
           Teaching moves ideas and it also moves identities. It sets who counts, who speaks, and who belongs.
         </p>
-        <ul className="list-disc pl-6 space-y-1 text-neutral-900">
-          <li><strong>Readers and recitation</strong>. Literacy plus rehearsal of a “proper” civic voice.</li>
-          <li><strong>Rituals</strong> such as pledges or assemblies. Encode expectations of belonging and obedience.</li>
-          <li><strong>Task and track design</strong>. Decide which methods are practiced and which roles are channeled.</li>
-          <li><strong>Assessment</strong>. Define what counts as knowledge, for example single-shot correctness versus method reliability under change.</li>
-          <li><strong>Discipline and dress</strong>. Determine how cultural markers are policed and whose comfort is prioritized.</li>
+        <ul className="mt-4 list-disc pl-5 space-y-2 text-slate-800">
+          <li>
+            <span className="font-medium">Readers and recitation</span>. Literacy plus rehearsal of a proper civic
+            voice.
+          </li>
+          <li>
+            <span className="font-medium">Rituals</span> such as pledges or assemblies. Encode expectations of belonging
+            and obedience.
+          </li>
+          <li>
+            <span className="font-medium">Task and track design</span>. Decide which methods are practiced and which
+            roles are channeled.
+          </li>
+          <li>
+            <span className="font-medium">Assessment</span>. Define what counts as knowledge for example single shot
+            correctness versus method reliability under change.
+          </li>
+          <li>
+            <span className="font-medium">Discipline and dress</span>. Determine how cultural markers are policed and
+            whose comfort is prioritized.
+          </li>
         </ul>
       </section>
 
       {/* 3) Historical snapshots */}
-      <section className="space-y-3">
-        <h2 className="text-xl font-semibold">3) Historical snapshots</h2>
-        <div className="overflow-x-auto">
-          <table className="w-full text-sm border border-neutral-200">
+      <section className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
+        <h2 className="text-2xl font-semibold">3) Historical snapshots</h2>
+        <div className="mt-4 overflow-x-auto">
+          <table className="w-full text-sm border border-slate-200">
             <thead>
-              <tr className="bg-neutral-50 text-neutral-900">
+              <tr className="bg-slate-50 text-slate-900">
                 <th className="p-2 text-left border-b">Period</th>
-                <th className="p-2 text-left border-b">Key inputs (Σ)</th>
-                <th className="p-2 text-left border-b">Typical state paths (Q)</th>
+                <th className="p-2 text-left border-b">Key inputs Σ</th>
+                <th className="p-2 text-left border-b">Typical state paths Q</th>
               </tr>
             </thead>
-            <tbody className="text-neutral-900">
+            <tbody className="text-slate-900">
               <tr>
-                <td className="p-2 border-t font-medium">Common-school era</td>
+                <td className="p-2 border-t">Common school era</td>
                 <td className="p-2 border-t">Bible or McGuffey readers, recitation, local control</td>
-                <td className="p-2 border-t">Civic voice for some, parochial detours or quiet non-compliance for others</td>
+                <td className="p-2 border-t">
+                  Civic voice for some, parochial detours or quiet non compliance for others
+                </td>
               </tr>
               <tr>
-                <td className="p-2 border-t font-medium">Federal Indian boarding schools</td>
-                <td className="p-2 border-t">English-only, hair cutting, cultural erasure</td>
-                <td className="p-2 border-t">Recorded compliance, clandestine language maintenance and community return</td>
+                <td className="p-2 border-t">Federal Indian boarding schools</td>
+                <td className="p-2 border-t">English only, hair cutting, cultural erasure</td>
+                <td className="p-2 border-t">
+                  Recorded compliance, clandestine language maintenance and community return
+                </td>
               </tr>
               <tr>
-                <td className="p-2 border-t font-medium">Americanization and Progressive reforms</td>
+                <td className="p-2 border-t">Americanization and Progressive reforms</td>
                 <td className="p-2 border-t">Night schools, civics, vocationalism</td>
-                <td className="p-2 border-t">“Fit worker” exits, enclave preservation via church or mutual aid</td>
+                <td className="p-2 border-t">Fit worker exits, enclave preservation through church or mutual aid</td>
               </tr>
               <tr>
-                <td className="p-2 border-t font-medium">Jim Crow dual systems</td>
+                <td className="p-2 border-t">Jim Crow dual systems</td>
                 <td className="p-2 border-t">Segregated facilities, industrial curriculum</td>
-                <td className="p-2 border-t">Constrained roles, counter-paths via HBCUs and movement schools</td>
+                <td className="p-2 border-t">Constrained roles, counter paths via HBCUs and movement schools</td>
               </tr>
               <tr>
-                <td className="p-2 border-t font-medium">Desegregation to standards and testing</td>
-                <td className="p-2 border-t">Busing, accountability regimes, high-stakes tests</td>
+                <td className="p-2 border-t">Desegregation to standards and testing</td>
+                <td className="p-2 border-t">Busing, accountability regimes, high stakes tests</td>
                 <td className="p-2 border-t">Mixed trajectories including assimilation, resistance, and exclusion</td>
               </tr>
             </tbody>
@@ -114,64 +153,86 @@ export default function ENDTPage() {
       </section>
 
       {/* 4) Why non-deterministic */}
-      <section className="space-y-3">
-        <h2 className="text-xl font-semibold">4) Why non-deterministic</h2>
-        <p className="text-neutral-800">
-          Identity filters shape meaning. The same input can stabilize different states. This is why “what works”
-          usually means “what worked for whom, under which filters, and at what cost.” Improvement must change
-          <strong> Σ</strong> as the signals, and <strong>Δ</strong> as the transitions that are possible, and for whom.
+      <section className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
+        <h2 className="text-2xl font-semibold">4) Why non-deterministic</h2>
+        <p className="mt-2 text-slate-800">
+          Identity filters shape meaning. The same input can stabilize different states. This is why what works usually
+          means what worked for whom, under which filters, and at what cost. Improvement must change Σ as the signals and
+          Δ as the transitions that are possible, and for whom.
         </p>
       </section>
 
       {/* 5) Externalities and negative impacts */}
-      <section className="space-y-3">
-        <h2 className="text-xl font-semibold">5) Externalities and negative impacts</h2>
-        <p className="text-neutral-800">
+      <section className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
+        <h2 className="text-2xl font-semibold">5) Externalities and negative impacts</h2>
+        <p className="mt-2 text-slate-800">
           Every lever has side effects. ENDT surfaces harms that are often kept off the ledger.
         </p>
-        <ul className="list-disc pl-6 space-y-1 text-neutral-900">
-          <li><strong>Displacement effects</strong>. A push for “rigor” can increase withdrawal for students facing identity threat or time scarcity.</li>
-          <li><strong>Legibility tax</strong>. Students spend extra effort translating themselves into what the record system recognizes.</li>
-          <li><strong>Role lock-in</strong>. Tracking and “fit” language naturalize narrow futures even when knowledge grows.</li>
-          <li><strong>Credibility asymmetry</strong>. The same behavior, such as challenge or dissent, reads as leadership for some and defiance for others.</li>
-        </ul>
-        <p className="text-neutral-800">
-          This attention to status, belonging, and role aligns with Identity Economics. In that tradition we treat identity as a function
-          <strong> I(·)</strong> that shifts incentives and perceived costs, which changes how inputs are received and which transitions are likely.
-        </p>
-      </section>
-
-      {/* 6) Practical levers (system-side, revised) */}
-      <section className="space-y-3">
-        <h2 className="text-xl font-semibold">6) Practical levers</h2>
-        <ul className="list-disc pl-6 space-y-2 text-neutral-900">
+        <ul className="mt-3 list-disc pl-5 space-y-2 text-slate-800">
           <li>
-            <strong>Reference-frame training</strong>. Make frames explicit in every unit. What counts as an object, which relations matter,
-            and what stays invariant when conditions change. Teach learners to name a frame, shift it, and compare frames without treating
-            disagreement as failure.
+            <span className="font-medium">Displacement effects</span>. A push for rigor can increase withdrawal for
+            students facing identity threat or time scarcity.
           </li>
           <li>
-            <strong>Assessment</strong>. Use frequent low-stakes checks tied to method reliability. Offer revision tokens. Use portfolio exits
-            that value how a result was obtained and whether it transfers after a frame shift.
+            <span className="font-medium">Legibility tax</span>. Students spend extra effort translating themselves into
+            what the record system recognizes.
           </li>
           <li>
-            <strong>Task design</strong>. Use adjacent-possible prompts, require counter-example rounds, and publish clear constructor recipes
-            with steps, checks, and failure modes so methods travel across frames.
+            <span className="font-medium">Role lock in</span>. Tracking and fit language can naturalize narrow futures
+            even when knowledge grows.
           </li>
           <li>
-            <strong>Discourse</strong>. Use identity-safe critique protocols, normalize “changed-my-mind” logs, and give credit for reframing work.
-          </li>
-          <li>
-            <strong>Discipline</strong>. Prefer restorative transitions rather than exclusion. Minimize policing of cultural markers. Treat conflict
-            as a chance to reframe rather than a purity test.
+            <span className="font-medium">Credibility asymmetry</span>. The same behavior for example challenge or
+            dissent reads as leadership for some and defiance for others.
           </li>
         </ul>
-        <p className="text-neutral-800">
-          See XIK-TD for the learner-side reference frames that ENDT inputs must traverse.
-        </p>
+        <div className="mt-4 rounded-2xl border border-slate-200 p-4 bg-indigo-50/60">
+          <p className="text-sm text-slate-900">
+            Identity Economics framing: we treat identity as a function <span className="font-medium">I(·)</span> that
+            shifts incentives and perceived costs. That shift changes how inputs are received and which transitions are
+            likely. This informs research instruments and design choices.
+          </p>
+        </div>
       </section>
 
-      {/* Evidence intentionally omitted until we have citations or our own data */}
+      {/* 6) Practical levers */}
+      <section className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
+        <h2 className="text-2xl font-semibold">6) Practical levers</h2>
+        <ul className="mt-3 list-disc pl-5 space-y-2 text-slate-800">
+          <li>
+            <span className="font-medium">Reference frame training</span> (priority). Make frames explicit in every
+            unit. What counts as an object, which relations matter, and what stays invariant when conditions change.
+            Teach learners to name a frame, shift it, and compare frames without treating disagreement as failure.
+          </li>
+          <li>
+            <span className="font-medium">Assessment</span>. Use frequent low stakes checks tied to method reliability.
+            Offer revision tokens. Use portfolio exits that value how a result was obtained and whether it transfers
+            after a frame shift.
+          </li>
+          <li>
+            <span className="font-medium">Task design</span>. Use adjacent possible prompts, require counter example
+            rounds, and publish clear constructor recipes with steps, checks, and failure modes so methods travel across
+            frames.
+          </li>
+          <li>
+            <span className="font-medium">Discourse</span>. Use identity safe critique protocols, normalize changed my
+            mind logs, and give credit for reframing work.
+          </li>
+          <li>
+            <span className="font-medium">Discipline</span>. Prefer restorative transitions rather than exclusion.
+            Minimize policing of cultural markers. Treat conflict as a chance to reframe rather than a purity test.
+          </li>
+        </ul>
+      </section>
+
+      {/* Cross-links */}
+      <section className="rounded-2xl border border-slate-200 bg-white p-4">
+        <p className="text-slate-800">
+          See <a className="text-indigo-700 underline" href="/frameworks/xik-td">XIK-TD</a> for the learner side loop
+          and <a className="text-indigo-700 underline" href="/frameworks/belief-space">Belief Space</a> for how shared
+          anchors make new trajectories legible.
+        </p>
+      </section>
     </div>
   )
 }
