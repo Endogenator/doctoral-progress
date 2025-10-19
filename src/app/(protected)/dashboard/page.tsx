@@ -150,14 +150,13 @@ export default function DashboardPage() {
 }
 
 /* --- Presentational helpers --- */
-
 function QuickLink({ title, desc, href }: { title: string; desc: string; href: string }) {
   return (
     <a
       href={href}
       className="block rounded-2xl border border-slate-200 p-4 bg-white hover:border-indigo-300 hover:bg-slate-50 transition"
     >
-      <p className="font-semibold">{title}</p>
+      <p className="font-semibold text-slate-900 dark:text-emerald-200">{title}</p>
       <p className="mt-1 text-sm text-slate-800">{desc}</p>
     </a>
   )
@@ -174,7 +173,7 @@ function Card({
 }) {
   return (
     <div className={`rounded-2xl border border-slate-200 p-4 ${tint ? 'bg-slate-50' : ''}`}>
-      <p className="font-semibold">{title}</p>
+      <p className="font-semibold text-slate-900 dark:text-emerald-200">{title}</p>
       <div className="mt-2">{children}</div>
     </div>
   )
@@ -191,7 +190,7 @@ function CheckCard({
 }) {
   return (
     <div className={`rounded-2xl border border-slate-200 p-4 ${tint ? 'bg-slate-50' : ''}`}>
-      <p className="font-semibold">{title}</p>
+      <p className="font-semibold text-slate-900 dark:text-emerald-200">{title}</p>
       <ul className="mt-2 list-disc pl-5 text-slate-800 space-y-1">{children}</ul>
     </div>
   )
@@ -208,8 +207,9 @@ function RoadmapCard({
 }) {
   return (
     <div className={`rounded-2xl border border-slate-200 p-4 ${tint ? 'bg-slate-50' : ''}`}>
-      <p className="font-semibold">{title}</p>
+      <p className="font-semibold text-slate-900 dark:text-emerald-200">{title}</p>
       <p className="mt-1 text-sm text-slate-800">{desc}</p>
     </div>
   )
 }
+
