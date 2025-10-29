@@ -1,5 +1,7 @@
 import { currentUser } from '@clerk/nextjs/server'
 import Sidebar from './_components/Sidebar'
+// existing imports...
+import Footer from './_components/Footer'
 
 export default async function ProtectedLayout({
   children,
@@ -35,8 +37,11 @@ export default async function ProtectedLayout({
       </div>
 
       <main className="flex-1 p-6">
+        {/* Content column */}
         <div className="mx-auto max-w-5xl">
           {children}
+          {/* Footer appears on every protected page, matches the same width */}
+          <Footer />
         </div>
       </main>
     </div>

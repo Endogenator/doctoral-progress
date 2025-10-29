@@ -23,6 +23,22 @@ export default function IntegrationPage() {
         </p>
       </section>
 
+      {/* 0) Vocabulary: Fermiate */}
+      <section className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
+        <h2 className="text-2xl font-semibold">0) Vocabulary: Fermiate</h2>
+        <Definition term="Fermiate (noun)">
+          <p>A disciplined, bounded inference step inspired by Enrico Fermi’s estimation style.</p>
+          <ul className="list-disc pl-5">
+            <li><span className="font-medium">Assumptions</span>: write them in one line.</li>
+            <li><span className="font-medium">Estimate</span>: order-of-magnitude or back-of-the-envelope.</li>
+            <li><span className="font-medium">Test</span>: the quickest check you can run now.</li>
+            <li><span className="font-medium">Validity</span>: where this holds and where it breaks.</li>
+            <li><span className="font-medium">Next move</span>: one adjacent step if results are promising.</li>
+          </ul>
+          <p className="text-xs mt-2">Verb: “to fermiate.” Plural: “Fermiates.”</p>
+        </Definition>
+      </section>
+
       {/* 1) Why integrate */}
       <section className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
         <h2 className="text-2xl font-semibold">1) Why integrate</h2>
@@ -108,7 +124,7 @@ export default function IntegrationPage() {
         <div className="mt-4 grid md:grid-cols-3 gap-6">
           <Card title="ENDT move">
             <ul className="list-disc pl-5 text-slate-800 space-y-1">
-              <li>Replace one capstone with a four week sequence of adjacent small bets.</li>
+              <li>Replace one capstone with a four week sequence of adjacent Fermiates.</li>
               <li>Enable portfolio or competency exits with clear validity conditions.</li>
               <li>Add micro grant and apprenticeship lanes with transparent criteria.</li>
             </ul>
@@ -122,7 +138,7 @@ export default function IntegrationPage() {
           </Card>
           <Card title="Belief Space move">
             <ul className="list-disc pl-5 text-slate-800 space-y-1">
-              <li>Adopt shared anchors: proof of work template, constructor reliability standard, small bet norm.</li>
+              <li>Adopt shared anchors: proof of work template, constructor reliability standard, Fermiate norm.</li>
               <li>Hold monthly showcases to stabilize meaning and reduce the credibility gap.</li>
               <li>Encourage cross group endorsements to bridge networks for excluded learners.</li>
             </ul>
@@ -150,13 +166,13 @@ export default function IntegrationPage() {
                 'Constructor reliability',
                 'Pass rate across attempts',
                 'Steps, checks, and failure modes verified by a second person',
-                'Peer teaches the recipe, logs result',
+                'Peer teaches the recipe and logs result',
               ]}/>
               <Tr cells={[
-                'Small bet venture',
-                'Paid micro project or measurable trial',
+                'Fermiate step',
+                'Measured outcome from a bounded inference test',
                 'Time boxed, capped risk, explicit success metric',
-                'Pilot a $100–$500 engagement or barter for credible testimonial',
+                'Scale the check or convert to a paid micro engagement',
               ]}/>
               <Tr cells={[
                 'Competency transcript',
@@ -188,7 +204,7 @@ export default function IntegrationPage() {
             <ul className="list-disc pl-5 text-slate-800 space-y-1">
               <li>Number of proof of work entries with third party evidence.</li>
               <li>Number of peer verified constructor runs.</li>
-              <li>Number of small bet trials that reached success signal.</li>
+              <li>Number of Fermiates that reached the success signal.</li>
             </ul>
           </Card>
         </div>
@@ -233,8 +249,17 @@ function Card({
 }) {
   return (
     <div className={`rounded-2xl border border-slate-200 p-4 ${tint ? 'bg-slate-50' : ''}`}>
-      <p className="font-semibold">{title}</p>
+      <p className="font-semibold text-slate-900 dark:text-emerald-200">{title}</p>
       <div className="mt-2">{children}</div>
+    </div>
+  )
+}
+
+function Definition({ term, children }: { term: string; children: React.ReactNode }) {
+  return (
+    <div className="rounded-2xl border border-slate-200 p-4 bg-slate-50">
+      <p className="font-semibold text-slate-900 dark:text-emerald-200">{term}</p>
+      <div className="mt-2 text-slate-800 text-sm space-y-1">{children}</div>
     </div>
   )
 }

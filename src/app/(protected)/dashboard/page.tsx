@@ -1,6 +1,6 @@
 /**
  * Dashboard — Doctoral Progress
- * Style aligned with ENDT / XIK-TD / Belief Space pages
+ * Style aligned with ENDT / XIK-TD / Belief Space / Integration pages
  * No em dashes
  */
 
@@ -11,11 +11,12 @@ export default function DashboardPage() {
       <section className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8 shadow-sm">
         <h1 className="text-3xl md:text-4xl font-bold tracking-tight">Doctoral Progress Dashboard</h1>
         <p className="mt-3 text-lg text-slate-800">
-          This workspace tracks the development of three linked frameworks and the research program that connects them.
-          The goal is to increase reliability and transfer of learning while lowering hidden costs for learners who are often excluded.
+          This dashboard helps me organize my projects, classes, and writing. The site shares how I am developing three connected ideas:
+          ENDT, XIK-TD, and Belief Space. I want these pages to show the work as it grows, not just final results.
         </p>
         <p className="mt-2 text-slate-800 text-sm">
-          Use the quick links below to jump to pages. The sections that follow list next actions, drafts in flight, and publishing steps.
+          My goal is to make learning more reliable and useful, with lower hidden costs for students who are often excluded by
+          current systems. The sections below link to the frameworks, list next steps, and track drafts in progress.
         </p>
       </section>
 
@@ -23,34 +24,71 @@ export default function DashboardPage() {
       <section className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
         <h2 className="text-2xl font-semibold">1) Quick links</h2>
         <div className="mt-4 grid gap-4 md:grid-cols-2">
-          <QuickLink title="ENDT — Education as a Non Deterministic Transducer" href="/frameworks/endt"
-            desc="System view. Change signals and feasible transitions." />
-          <QuickLink title="XIK-TD — Experience, Identity, Knowledge Transformation Domain" href="/frameworks/xik-td"
-            desc="Learner loop. K = f(X, I, B). Identity weighted filters and LaTeX formulas." />
-          <QuickLink title="Belief Space — Designing Exploration and Focus Points" href="/frameworks/belief-space"
-            desc="Community view. Shared anchors and subjective frames." />
-          <QuickLink title="Integration — Stitching the three lenses" href="/frameworks/integration"
-            desc="How system, learner, and community moves align." />
+          <QuickLink
+            title="ENDT — Education as a Non Deterministic Transducer"
+            href="/frameworks/endt"
+            desc="System view. How school signals and rules shape paths."
+          />
+        </div>
+        <div className="mt-4 grid gap-4 md:grid-cols-2">
+          <QuickLink
+            title="XIK-TD — Experience, Identity, Knowledge Transformation Domain"
+            href="/frameworks/xik-td"
+            desc="Learner view. K = f(X, I, B). How people turn information into knowledge under identity costs."
+          />
+          <QuickLink
+            title="Belief Space — Designing Exploration and Focus Points"
+            href="/frameworks/belief-space"
+            desc="Community view. How groups align meaning and create shared anchors for action."
+          />
+          <QuickLink
+            title="Integration — Stitching the three lenses"
+            href="/frameworks/integration"
+            desc="How system, learner, and community moves fit together in practice."
+          />
+        </div>
+      </section>
+
+      {/* Current courses */}
+      <section className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
+        <h2 className="text-2xl font-semibold">2) Current courses</h2>
+        <div className="mt-3 grid gap-6 md:grid-cols-2">
+          <Card title="EDUC 829: Historical Foundations in Education and Social Justice">
+            <p className="text-slate-800">
+              Focus: how history, policy, and social movements shaped schooling. I am connecting course themes to ENDT
+              by mapping which inputs and rules mattered most in each era.
+            </p>
+          </Card>
+          <Card title="EDUC 827: Leadership and Practice in Education" tint>
+            <p className="text-slate-800">
+              Focus: practical leadership models. I am testing XIK-TD practices that reduce identity costs and raise method reliability.
+            </p>
+          </Card>
+          <Card title="EDUC 820A: Writing a Literature Review">
+            <p className="text-slate-800">
+              Focus: clear synthesis and scope control. I am building a clean reference trail for ENDT, XIK-TD, and Belief Space.
+            </p>
+          </Card>
         </div>
       </section>
 
       {/* Next actions */}
       <section className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
-        <h2 className="text-2xl font-semibold">2) Next actions</h2>
+        <h2 className="text-2xl font-semibold">3) Next actions</h2>
         <div className="mt-4 grid gap-6 md:grid-cols-2">
           <Card title="Design and writing">
             <ul className="list-disc pl-5 text-slate-800 space-y-1">
-              <li>Add a small Methods subsection for I(·), X(·), and B(·) with one diagram each.</li>
-              <li>Draft a study design for the credential to skill or venture sequence with clear logs and counters.</li>
-              <li>Publish the proof of work template and a one page constructor recipe format.</li>
-              <li>Schedule one monthly showcase and invite two external mentors for cross group validation.</li>
+              <li>Build a first StoryMaps draft to visualize Belief Space and how focus points form.</li>
+              <li>Draft a short paper on the integration of ENDT and XIK-TD. If it reads well, post it on the site.</li>
+              <li>Add a simple Methods section for I(·), X(·), and B(·) with one small diagram each.</li>
+              <li>Publish a proof of work template and a one page constructor recipe format.</li>
             </ul>
           </Card>
           <Card title="Site and usability" tint>
             <ul className="list-disc pl-5 text-slate-800 space-y-1">
-              <li>Confirm access flow lands signed in users directly on this dashboard.</li>
-              <li>Print layout check on all pages. Avoid clipped content and confirm A4 or Letter as needed.</li>
-              <li>Glossary pass across pages for consistent terms and capitalization.</li>
+              <li>Confirm that sign in takes visitors directly to this dashboard.</li>
+              <li>Check print layout on all pages. Avoid clipped content.</li>
+              <li>Do a quick glossary pass so terms match across pages.</li>
             </ul>
           </Card>
         </div>
@@ -58,44 +96,24 @@ export default function DashboardPage() {
 
       {/* Drafts in progress */}
       <section className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
-        <h2 className="text-2xl font-semibold">3) Drafts in progress</h2>
+        <h2 className="text-2xl font-semibold">4) Drafts in progress</h2>
         <div className="mt-4 grid gap-6 md:grid-cols-2">
-          <Card title="Identity utility section (Akerlof and Kranton)">
+          <Card title="Belief Space StoryMaps">
             <p className="text-slate-800">
-              Added canonical function and narrowed learning utility with KaTeX. Next, connect weights to instruments and logs.
+              Mapping shared anchors, frames, and how focus points spread. Goal: a simple, scrollable map that a mentor can review quickly.
             </p>
             <ul className="mt-2 list-disc pl-5 text-slate-800 space-y-1">
-              <li>Define identity salience and translation tax items.</li>
-              <li>Specify estimation plan for β and λ using small trials.</li>
+              <li>Sketch the sections and the flow first. Keep it short.</li>
+              <li>Choose one worked example to anchor the story.</li>
             </ul>
           </Card>
-          <Card title="Belief Space alignment moves" tint>
+          <Card title="Short paper: ENDT with XIK-TD" tint>
             <p className="text-slate-800">
-              Focus points, adjacent possible design, and competency transcript anchors are drafted.
+              A brief write up that explains the link: ENDT changes the input architecture, XIK-TD models the learner loop.
             </p>
             <ul className="mt-2 list-disc pl-5 text-slate-800 space-y-1">
-              <li>Add one worked artifact as a proof of work example.</li>
-              <li>Draft facilitator notes for monthly showcase sessions.</li>
-            </ul>
-          </Card>
-        </div>
-      </section>
-
-      {/* Access and domain */}
-      <section className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
-        <h2 className="text-2xl font-semibold">4) Access and domain</h2>
-        <div className="mt-4 grid gap-6 md:grid-cols-2">
-          <Card title="Current status">
-            <ul className="list-disc pl-5 text-slate-800 space-y-1">
-              <li>Protected app routes are live behind sign in.</li>
-              <li>Post sign in redirect goes to dashboard.</li>
-              <li>Site is not indexed. Keep visibility limited to invited accounts.</li>
-            </ul>
-          </Card>
-          <Card title="Domain mapping" tint>
-            <ul className="list-disc pl-5 text-slate-800 space-y-1">
-              <li>Primary: <span className="font-medium">doctorate.endogenator.com</span></li>
-              <li>CNAME points to Vercel. Change only if provider or project changes.</li>
+              <li>Keep it under 1500 words. Use one figure.</li>
+              <li>Post a PDF on the site if the draft holds up.</li>
             </ul>
           </Card>
         </div>
@@ -107,7 +125,7 @@ export default function DashboardPage() {
         <div className="mt-4 grid gap-6 md:grid-cols-3">
           <CheckCard title="Structure">
             <li>Headings scan well and are consistent across pages.</li>
-            <li>Reference frames are defined in plain language.</li>
+            <li>Reference frames are explained in plain language.</li>
             <li>Cross links among ENDT, XIK-TD, and Belief Space are present.</li>
           </CheckCard>
           <CheckCard title="Evidence and claims" tint>
@@ -116,9 +134,9 @@ export default function DashboardPage() {
             <li>Limits and validity conditions are stated on examples.</li>
           </CheckCard>
           <CheckCard title="Access and print">
-            <li>Post sign in lands on dashboard and not the old landing page.</li>
+            <li>Post sign in lands on this dashboard, not the old landing page.</li>
             <li>Print layout uses full width with no clipping.</li>
-            <li>PDF export looks legible and centered.</li>
+            <li>PDF export is readable and centered.</li>
           </CheckCard>
         </div>
       </section>
@@ -127,12 +145,19 @@ export default function DashboardPage() {
       <section className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
         <h2 className="text-2xl font-semibold">6) Research roadmap snapshot</h2>
         <div className="mt-4 grid gap-6 md:grid-cols-3">
-          <RoadmapCard title="I(·) Identity function"
-            desc="Model how norms and roles shift incentives and costs. Plan: instrument identity salience and credibility effects." />
-          <RoadmapCard title="X(·) Experience process" tint
-            desc="Treat experience as structured signal across time and source. Plan: attention and memory cost measures." />
-          <RoadmapCard title="B(·) Belief operator"
-            desc="Identity weighted priors and high friction attractors. Plan: track shifts from fixed to simulative or causal models." />
+          <RoadmapCard
+            title="I(·) Identity function"
+            desc="Model how norms and roles shift incentives and costs. Plan: instrument identity salience and credibility effects."
+          />
+          <RoadmapCard
+            title="X(·) Experience process"
+            tint
+            desc="Treat experience as structured signal across time and source. Plan: attention and memory cost measures."
+          />
+          <RoadmapCard
+            title="B(·) Belief operator"
+            desc="Identity weighted priors and high friction attractors. Plan: track shifts from fixed to simulative or causal models."
+          />
         </div>
       </section>
 
@@ -140,7 +165,7 @@ export default function DashboardPage() {
       <section className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
         <h2 className="text-2xl font-semibold">7) Notes to self</h2>
         <ul className="list-disc pl-5 text-slate-800 space-y-1">
-          <li>Keep language concrete. Prefer examples and short procedures over abstractions.</li>
+          <li>Keep language concrete. Use examples and short procedures.</li>
           <li>Design one step moves. Bank gains and record limits.</li>
           <li>Lower hidden costs. Reduce identity threat, time debt, and translation tax.</li>
         </ul>
@@ -212,4 +237,3 @@ function RoadmapCard({
     </div>
   )
 }
-
