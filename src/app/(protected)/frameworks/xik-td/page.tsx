@@ -99,3 +99,6 @@ export default function XIKTDPage() {
           </div>
         </div>
       </section>
+    </div>
+      )
+}
