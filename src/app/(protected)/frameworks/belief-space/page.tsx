@@ -195,3 +195,47 @@ export default function BeliefSpacePage() {
     </div>
   )
 }
+function Card({
+  title,
+  children,
+  tint = false,
+}: {
+  title: string
+  children: React.ReactNode
+  tint?: boolean
+}) {
+  return (
+    <div className={`rounded-2xl border border-slate-200 p-4 ${tint ? 'bg-slate-50' : ''}`}>
+      <p className="font-semibold text-slate-900 dark:text-emerald-200">{title}</p>
+      <div className="mt-2">{children}</div>
+    </div>
+  )
+}
+function MiniTable({
+  title,
+  rows,
+}: {
+  title: string
+  rows: [string, string][]
+}) {
+  return (
+    <div className="rounded-2xl border border-slate-200">
+      <div className="p-4">
+        <p className="font-semibold text-slate-900 dark:text-emerald-200">{title}</p>
+      </div>
+      <div className="border-t border-slate-200">
+        <table className="min-w-full text-sm">
+          <tbody>
+            {rows.map((r, i) => (
+              <tr key={i} className="border-t border-slate-200">
+                <td className="p-3 align-top text-slate-800">{r[0]}</td>
+                <td className="p-3 align-top text-slate-800">{r[1]}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  )
+}
+
