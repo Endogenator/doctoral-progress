@@ -1,45 +1,64 @@
 @import "tailwindcss";
 
 /* ------------------------------------------
-   Base theme hooks (kept minimal)
+   Base theme hooks
 ------------------------------------------ */
 @theme inline {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-/* Use the fonts you configured in layout.tsx */
+/* ------------------------------------------
+   Global body styling
+------------------------------------------ */
 body {
   font-family: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system,
-    Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+
+  /* Earth-tone base */
+  background-color: #f4f1ec; /* parchment */
+  color: #2f2f2f; /* charcoal */
 }
 
 /* ------------------------------------------
-   Headings (high contrast + forest-green subheads)
+   Headings: restrained fall palette
 ------------------------------------------ */
 @layer base {
-  h1 { @apply text-slate-900; }
-  h2 { @apply text-emerald-800; } /* forest vibe */
-  h3 { @apply text-emerald-900; } /* slightly darker */
-  h4 { @apply text-slate-900; }
-}
-
-/* Optional utility to force a green subheading on specific elements */
-@layer components {
-  .subheading { @apply text-emerald-800; }
+  h1 { @apply text-stone-900; }
+  h2 { @apply text-amber-900; }   /* burnt amber */
+  h3 { @apply text-amber-800; }
+  h4 { @apply text-stone-900; }
 }
 
 /* ------------------------------------------
-   Print: consolidated, no clipping, centered
+   Semantic helpers
 ------------------------------------------ */
-@media print {
-  /* Page size & margins (set to Letter; switch to A4 if preferred) */
-  @page {
-    size: Letter;
-    margin: 0.5in; /* ~12.7mm */
+@layer components {
+  .subheading { @apply text-amber-900; }
+
+  .card {
+    @apply rounded-2xl border border-stone-300 bg-white p-4;
   }
 
-  /* Ensure light background and strong text in print */
+  .card-muted {
+    @apply bg-stone-50;
+  }
+
+  .panel {
+    @apply rounded-3xl border border-stone-300 bg-white;
+  }
+}
+
+/* ------------------------------------------
+   Print: consolidated, no clipping
+------------------------------------------ */
+@media print {
+  @page {
+    size: Letter;
+    margin: 0.5in;
+  }
+
   html, body {
     background: #fff !important;
     color: #111 !important;
@@ -47,12 +66,12 @@ body {
     print-color-adjust: exact;
   }
 
-  /* Hide sidebar and any sticky nav chrome */
-  aside, nav[aria-label="Sidebar"], #sidebar-nav {
+  aside,
+  nav[aria-label="Sidebar"],
+  #sidebar-nav {
     display: none !important;
   }
 
-  /* Make the main area full width (prevent right-edge cutoff) */
   main {
     padding: 0 !important;
     margin: 0 !important;
@@ -60,45 +79,35 @@ body {
     max-width: 100% !important;
   }
 
-  /* Neutralize Tailwind max widths and centering from inner pages */
-  .print-full,
   .max-w-4xl,
   .max-w-5xl,
   .max-w-6xl,
+  .mx-auto,
   .prose {
     max-width: 100% !important;
-    width: 100% !important;
-  }
-  .mx-auto {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin: 0 !important;
   }
 
-  /* Remove card borders/padding that can clip near page edges */
   .print-card {
     border: 0 !important;
     padding: 0 !important;
     background: #fff !important;
   }
 
-  /* Ensure tables/media do not overflow and don’t get split badly */
   table {
     width: 100% !important;
     border-collapse: collapse !important;
   }
+
   img, svg, video, canvas {
     max-width: 100% !important;
     height: auto !important;
-    page-break-inside: avoid;
     break-inside: avoid;
+    page-break-inside: avoid;
   }
 
-  /* Gentle page breaks before major sections */
   .print-break-before {
     break-before: page;
     page-break-before: always;
   }
-
-  /* Tighter paragraph line-height in print if needed */
-  .print\:prose-p\:leading-6 p { line-height: 1.5 !important; }
 }
