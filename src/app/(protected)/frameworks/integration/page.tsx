@@ -158,3 +158,35 @@ export default function IntegrationPage() {
     </div>
   )
 }
+function Card({
+  title,
+  children,
+  tint = false,
+}: {
+  title: string
+  children: React.ReactNode
+  tint?: boolean
+}) {
+  return (
+    <div className={`rounded-2xl border border-slate-200 p-4 ${tint ? 'bg-slate-50' : ''}`}>
+      <p className="font-semibold text-slate-900">{title}</p>
+      <div className="mt-2">{children}</div>
+    </div>
+  )
+}
+function Definition({
+  term,
+  children,
+}: {
+  term: string
+  children: React.ReactNode
+}) {
+  return (
+    <div className="rounded-2xl border border-slate-200 p-4 bg-slate-50">
+      <p className="font-semibold text-slate-900">{term}</p>
+      <div className="mt-2 text-slate-800 text-sm space-y-1">
+        {children}
+      </div>
+    </div>
+  )
+}
