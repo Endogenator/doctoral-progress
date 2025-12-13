@@ -1,7 +1,5 @@
 import { currentUser } from '@clerk/nextjs/server'
 import Sidebar from './_components/Sidebar'
-// existing imports...
-import Footer from './_components/Footer'
 
 export default async function ProtectedLayout({
   children,
@@ -12,15 +10,17 @@ export default async function ProtectedLayout({
 
   if (!user) {
     return (
-      <div className="min-h-screen flex items-center justify-center p-8">
-        <div className="max-w-md text-center space-y-4">
-          <h1 className="text-2xl font-semibold">Sign-in required</h1>
-          <p className="text-slate-700">
+      <div className="min-h-screen flex items-center justify-center bg-stone-100 p-8">
+        <div className="max-w-md rounded-md border border-stone-300 bg-white p-6 text-center">
+          <h1 className="text-2xl font-semibold text-stone-900">
+            Sign-in required
+          </h1>
+          <p className="mt-2 text-stone-700">
             You need to be signed in to view this content.
           </p>
           <a
             href="/sign-in"
-            className="inline-block rounded-md bg-indigo-600 px-4 py-2 text-white"
+            className="mt-4 inline-block rounded-md bg-stone-800 px-4 py-2 text-white hover:bg-stone-900"
           >
             Go to sign in
           </a>
@@ -30,18 +30,14 @@ export default async function ProtectedLayout({
   }
 
   return (
-    // Light gradient adds color without hurting readability
-    <div className="md:flex md:min-h-screen bg-gradient-to-br from-slate-50 via-indigo-50 to-slate-100">
-      <div className="md:w-64 md:flex-shrink-0">
+    <div className="md:flex md:min-h-screen bg-stone-100">
+      <aside className="md:w-64 md:flex-shrink-0 border-r border-stone-300 bg-stone-200">
         <Sidebar />
-      </div>
+      </aside>
 
       <main className="flex-1 p-6">
-        {/* Content column */}
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-5xl space-y-8">
           {children}
-          {/* Footer appears on every protected page, matches the same width */}
-          <Footer />
         </div>
       </main>
     </div>
