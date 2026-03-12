@@ -1,0 +1,437 @@
+Doctoral Progress Website
+Development Guide
+
+Location of project:
+
+K:\doctoral-progress
+
+Framework stack:
+
+Next.js 15
+
+React
+
+TailwindCSS
+
+Clerk authentication
+
+Vercel deployment
+
+GitHub source control
+
+Purpose of site:
+
+This site documents the development of the following frameworks:
+
+ENDT — Education as a Non-Deterministic Transducer
+
+XIK-TD — Experience Identity Knowledge Transformation Domain
+
+Belief Space
+
+Integration of the three models
+
+The site also hosts course writing and working drafts.
+
+1 Project Architecture
+Root folder
+K:\doctoral-progress
+
+Key folders:
+
+src
+public
+node_modules
+.git
+
+Important files:
+
+package.json
+commit.bat
+next.config.ts
+tailwind.config.ts
+tsconfig.json
+2 Application Structure
+
+The site uses Next.js App Router.
+
+Main path:
+
+src/app
+
+Protected pages require login through Clerk.
+
+src/app/(protected)
+
+Inside that folder:
+
+dashboard
+frameworks
+writings
+_components
+layout.tsx
+3 Page Types
+Dashboard
+src/app/(protected)/dashboard/page.tsx
+
+Purpose:
+
+landing page after sign-in
+
+course updates
+
+framework navigation
+
+active research tasks
+
+Framework pages
+
+Location:
+
+src/app/(protected)/frameworks/
+
+Pages:
+
+endt
+xik-td
+belief-space
+integration
+
+Each folder contains:
+
+page.tsx
+
+These explain the theoretical framework.
+
+Writing pages
+
+Location:
+
+src/app/(protected)/writings
+
+Examples:
+
+educ-827
+educ-829
+
+Each contains:
+
+page.tsx
+
+Course papers are displayed as HTML on the site, not as downloadable documents.
+
+4 Shared Components
+
+Location:
+
+src/app/(protected)/_components
+
+Key components:
+
+Sidebar.tsx
+Footer.tsx
+Sidebar
+
+Controls navigation across the site.
+
+File:
+
+Sidebar.tsx
+
+To add a new page link:
+
+Edit the navItems list.
+
+Example:
+
+{ href: '/writings/educ-829', label: 'Writing: EDUC 829' }
+Footer
+
+Displayed at the bottom of protected pages.
+
+Used for:
+
+copyright notice
+
+sharing restrictions
+
+5 Authentication
+
+The site uses Clerk.
+
+Protected layout:
+
+src/app/(protected)/layout.tsx
+
+Logic:
+
+If user not signed in → redirect to sign-in.
+
+6 Styling System
+
+The site uses TailwindCSS.
+
+Primary color palette:
+
+Earth tone academic style:
+
+stone
+emerald
+amber
+slate
+
+Typical UI pattern:
+
+rounded-3xl
+border
+bg-stone-50
+shadow-sm
+
+Cards:
+
+rounded-2xl border border-stone-300 p-4
+
+Typography hierarchy:
+
+text-4xl → page title
+text-2xl → section header
+text-lg → lead paragraph
+text-sm → supporting notes
+7 Running the Development Environment
+
+Open terminal.
+
+Go to project:
+
+cd K:\doctoral-progress
+
+Install dependencies if needed:
+
+npm install
+
+Start dev server:
+
+npm run dev
+
+Open browser:
+
+http://localhost:3000
+
+The dev server hot-reloads automatically.
+
+8 PowerShell Script Error Fix
+
+If you see:
+
+npm.ps1 cannot be loaded because running scripts is disabled
+
+Run:
+
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+Then run:
+
+npm run dev
+9 Development Workflow
+
+Recommended process:
+
+Step 1
+
+Run dev server.
+
+npm run dev
+Step 2
+
+Edit pages in VS Code or with AI tools.
+
+Step 3
+
+Refresh browser to confirm changes.
+
+Step 4
+
+Stop server:
+
+Ctrl + C
+10 Publishing Changes
+
+The project uses GitHub → Vercel automatic deployment.
+
+Your automation script:
+
+commit.bat
+
+Location:
+
+K:\doctoral-progress\commit.bat
+Deployment Steps
+
+Run:
+
+commit.bat
+
+Script performs:
+
+1 Stage all changes
+2 Commit with message
+3 Push to GitHub
+
+After push:
+
+Vercel automatically deploys the new version
+
+Deployment usually completes in:
+
+30–90 seconds
+11 Checking Deployment
+
+Open:
+
+https://vercel.com/dashboard
+
+Look for latest deployment.
+
+Status should be:
+
+Ready
+
+If error occurs, open deployment logs.
+
+12 Common Build Errors
+TypeScript type errors
+
+Example:
+
+missing declaration file
+
+Fix:
+
+Install types or create declaration file.
+
+Missing module
+
+Example:
+
+Module not found
+
+Fix:
+
+npm install <module>
+Clerk key missing
+
+Check environment variables in Vercel.
+
+13 Adding a New Course Paper
+
+Create folder:
+
+src/app/(protected)/writings/<course-name>
+
+Example:
+
+writings/educ-830
+
+Inside folder create:
+
+page.tsx
+
+Then update sidebar.
+
+14 Writing Page Layout Pattern
+
+Typical structure:
+
+Header
+Abstract
+Body sections
+Figures
+References
+
+Figures stored in:
+
+public/images
+
+Referenced as:
+
+/images/filename.png
+15 Security Note
+
+This site is a private workspace.
+
+Pages should include notice:
+
+Content may not be copied or redistributed without permission.
+16 Working With AI Assistants (Claude / ChatGPT)
+
+When asking an AI to modify the site:
+
+Provide:
+
+file path
+existing code
+desired change
+
+Example prompt:
+
+Update src/app/(protected)/dashboard/page.tsx
+
+Add a section listing EDUC 830 papers.
+Keep the existing Tailwind styling pattern.
+Do not modify other components.
+
+This prevents accidental structural breakage.
+
+17 Backup Safety
+
+Before major changes:
+
+git pull
+
+After work:
+
+run commit.bat
+
+GitHub keeps full history.
+
+18 Key Rule for the Project
+
+Separate:
+
+course writing
+dissertation theory
+
+Course papers remain contextual artifacts.
+
+Framework pages contain the evolving theory.
+
+19 Future Improvements (Planned)
+
+Possible upgrades:
+
+StoryMaps integration for Belief Space
+
+interactive diagrams
+
+research timeline
+
+citation system
+
+figure indexing
+
+knowledge graph
+
+20 Emergency Reset
+
+If dev environment breaks:
+
+Delete:
+
+node_modules
+package-lock.json
+
+Then reinstall:
+
+npm install
+
+Restart dev server.

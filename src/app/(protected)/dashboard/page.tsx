@@ -3,6 +3,7 @@
  * Earth-tone palette
  * Style aligned with ENDT / XIK-TD / Belief Space / Integration pages
  * No em dashes
+ * Updated March 2026
  */
 
 import Link from 'next/link'
@@ -71,6 +72,18 @@ export default function DashboardPage() {
             href="/writings/educ-829"
             desc="The Belief in Schooling: how national disruptions reshaped educational purpose, 1890–1958."
           />
+          <QuickLink
+            title="EDUC 830 paper"
+            href="/writings/educ-830"
+            desc="Social Justice Theory and Practice: in progress."
+            muted
+          />
+          <QuickLink
+            title="EDUC 831 paper"
+            href="/writings/educ-831"
+            desc="Education Law, Policy, and Justice: in progress."
+            muted
+          />
         </div>
       </section>
 
@@ -78,26 +91,30 @@ export default function DashboardPage() {
       <section className="rounded-3xl border border-stone-300 bg-stone-50 p-6 md:p-8">
         <h2 className="text-2xl font-semibold text-stone-900">Current courses</h2>
         <div className="mt-4 grid gap-6 md:grid-cols-2">
-          <Card title="EDUC 829: Historical Foundations in Education and Social Justice">
+          <Card title="EDUC 820 (A/B/C): Writing a Literature Review">
             <p>
-              I am tracing how disruptions (war, depression, migration, policy shifts) reshaped what
-              Americans believed schooling was for. I use ENDT to map which inputs and rules mattered
-              most in each period, and who benefited or lost out.
+              The literature review sequence, running across three terms. I am building the
+              infrastructure for dissertation-level synthesis: search execution, source management,
+              and a scripted Google Sheets workbook that automates bibliography organization.
+              The work is methodological as much as it is topical.
             </p>
           </Card>
 
-          <Card title="EDUC 827: Leadership and Practice in Education" tint>
+          <Card title="EDUC 830: Social Justice Theory and Practice" tint>
             <p>
-              I am modeling leadership as a process of meaning reconstruction and correction.
-              This connects to XIK-TD because the same message produces different learning depending on
-              identity, incentives, and local norms.
+              Running through March 21. I am working through Young, Love, and related frameworks
+              not to adopt them wholesale but to understand their internal logic, their explanatory
+              reach, and where they break down. That analysis is part of building something more
+              causally rigorous.
             </p>
           </Card>
 
-          <Card title="EDUC 820: Writing a Literature Review">
+          <Card title="EDUC 831: Education Law, Policy, and Justice">
             <p>
-              This is the infrastructure course. The goal is scope control and synthesis, so the work
-              can support dissertation-level claims later without overreaching.
+              Running through April. I am tracing how constitutional rights, policy frames, and
+              institutional structures interact, using a running Signature Case simulation as the
+              applied thread. The course uses law as a lens for leadership judgment under ambiguity,
+              which maps usefully onto systems thinking about constraint and transition.
             </p>
           </Card>
         </div>
@@ -107,53 +124,26 @@ export default function DashboardPage() {
       <section className="rounded-3xl border border-stone-300 bg-stone-50 p-6 md:p-8">
         <h2 className="text-2xl font-semibold text-stone-900">Active work</h2>
         <div className="mt-4 grid gap-6 md:grid-cols-2">
-          <Card title="Belief Space StoryMaps (in progress)">
+          <Card title="Writing in progress">
             <p>
-              I am learning to use StoryMaps to visualize Belief Space. The goal is to make shared
-              anchors, reference points, and community meaning easier to inspect and discuss.
+              Drafting across multiple fronts. Course papers for 830 and 831 are in development.
+              Longer framework writing is ongoing in parallel.
             </p>
           </Card>
 
-          <Card title="Paper draft (maybe publish)" tint>
+          <Card title="Project in design" tint>
             <p>
-              I am writing a paper that ties the frameworks together and clarifies what I can claim now,
-              what I am still developing, and what evidence would actually count as progress.
+              A project is in early design. Not ready to describe yet.
+            </p>
+          </Card>
+
+          <Card title="Blog: coming soon">
+            <p>
+              A blog is in development. It will be a space for shorter, more direct writing
+              outside the constraints of course formats.
             </p>
           </Card>
         </div>
-      </section>
-
-      {/* Next actions */}
-      <section className="rounded-3xl border border-stone-300 bg-stone-50 p-6 md:p-8">
-        <h2 className="text-2xl font-semibold text-stone-900">Next actions</h2>
-        <div className="mt-4 grid gap-6 md:grid-cols-2">
-          <Card title="Design and writing">
-            <ul className="list-disc pl-5 space-y-1">
-              <li>Draft a Belief Space StoryMaps overview that is short and reviewable.</li>
-              <li>Write a short integration explainer linking ENDT and XIK-TD in concrete terms.</li>
-              <li>Add a small Methods page for I(·), X(·), and B(·) with simple diagrams.</li>
-              <li>Publish a proof-of-work template and a constructor recipe template.</li>
-            </ul>
-          </Card>
-
-          <Card title="Site and usability" tint>
-            <ul className="list-disc pl-5 space-y-1">
-              <li>Confirm sign-in lands on this dashboard (no extra landing step).</li>
-              <li>Check print layout and PDF export behavior.</li>
-              <li>Keep terminology consistent across framework pages and writings.</li>
-            </ul>
-          </Card>
-        </div>
-      </section>
-
-      {/* Notes */}
-      <section className="rounded-3xl border border-stone-300 bg-stone-50 p-6 md:p-8">
-        <h2 className="text-2xl font-semibold text-stone-900">Notes to self</h2>
-        <ul className="list-disc pl-5 space-y-1">
-          <li>Keep language concrete and procedural.</li>
-          <li>Prefer one-step moves, then bank gains.</li>
-          <li>Reduce identity threat, time debt, and translation tax.</li>
-        </ul>
       </section>
     </div>
   )
@@ -165,15 +155,21 @@ function QuickLink({
   title,
   desc,
   href,
+  muted = false,
 }: {
   title: string
   desc: string
   href: string
+  muted?: boolean
 }) {
   return (
     <Link
       href={href}
-      className="block rounded-2xl border border-stone-300 p-4 bg-white hover:bg-stone-100 transition"
+      className={`block rounded-2xl border border-stone-300 p-4 transition ${
+        muted
+          ? 'bg-stone-100 hover:bg-stone-200 opacity-60 cursor-default pointer-events-none'
+          : 'bg-white hover:bg-stone-100'
+      }`}
     >
       <p className="font-semibold text-stone-900">{title}</p>
       <p className="mt-1 text-sm text-stone-700">{desc}</p>
