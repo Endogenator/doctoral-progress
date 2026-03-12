@@ -32,7 +32,7 @@ export default function DashboardPage() {
         <h2 className="text-2xl font-semibold text-stone-900">Quick links</h2>
         <div className="mt-4 grid gap-4 md:grid-cols-2">
           <QuickLink
-            title="ENDT — Education as a Non-Deterministic Transducer"
+            title="ENDT — Education as a Transformative Coordination System"
             href="/frameworks/endt"
             desc="System view: how institutional signals and rules shape feasible student paths."
           />
