@@ -1,7 +1,6 @@
 /**
- * Dashboard — Doctoral Progress
- * Earth-tone palette
- * Style aligned with ENDT / XIK-TD / Belief Space / Integration pages
+ * Dashboard -- Doctoral Progress
+ * Olive green theme, Lora serif headings, parchment base
  * No em dashes
  * Updated March 2026
  */
@@ -10,17 +9,16 @@ import Link from 'next/link'
 
 export default function DashboardPage() {
   return (
-    <div className="max-w-5xl mx-auto space-y-8 text-stone-800">
+    <div className="max-w-5xl mx-auto space-y-8">
+
       {/* Header */}
-      <section className="rounded-3xl border border-stone-300 bg-stone-50 p-6 md:p-8 shadow-sm">
-        <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-stone-900">
-          Doctoral Progress Dashboard
-        </h1>
-        <p className="mt-3 text-lg text-stone-800">
+      <section className="page-header shadow-sm">
+        <h1>Doctoral Progress Dashboard</h1>
+        <p className="mt-3 text-lg">
           This site is my working space for building and testing ideas. It documents the ongoing
-          development of three connected frameworks: ENDT, XIK-TD, and Belief Space.
+          development of three connected frameworks: ENDT, XIK-TS, and Belief Space.
         </p>
-        <p className="mt-2 text-sm text-stone-700">
+        <p className="mt-2 text-sm" style={{ color: '#60622e' }}>
           The goal is not polished conclusions. The goal is to make development visible, track
           revisions, and design learning systems with lower hidden costs for students who are
           excluded or stratified by current structures.
@@ -28,8 +26,8 @@ export default function DashboardPage() {
       </section>
 
       {/* Quick links */}
-      <section className="rounded-3xl border border-stone-300 bg-stone-50 p-6 md:p-8">
-        <h2 className="text-2xl font-semibold text-stone-900">Quick links</h2>
+      <section className="panel">
+        <h2 className="section-heading">Quick links</h2>
         <div className="mt-4 grid gap-4 md:grid-cols-2">
           <QuickLink
             title="ENDT — Education as a Transformative Coordination System"
@@ -37,9 +35,9 @@ export default function DashboardPage() {
             desc="System view: how institutional signals and rules shape feasible student paths."
           />
           <QuickLink
-            title="XIK-TD — Experience, Identity, Knowledge Transformation Domain"
+            title="XIK-TS — Experience, Identity, Knowledge Transformation Space"
             href="/frameworks/xik-td"
-            desc="Learner view: how experience becomes knowledge under identity costs and risk."
+            desc="Learner view: how experience becomes knowledge through identity acting as reagent, and how the Transformation Space describes the boundary of what is thinkable and reachable."
           />
           <QuickLink
             title="Belief Space — Designing Exploration and Focus Points"
@@ -55,9 +53,9 @@ export default function DashboardPage() {
       </section>
 
       {/* Writings */}
-      <section className="rounded-3xl border border-stone-300 bg-stone-50 p-6 md:p-8">
-        <h2 className="text-2xl font-semibold text-stone-900">Course writings</h2>
-        <p className="mt-2 text-sm text-stone-700">
+      <section className="panel">
+        <h2 className="section-heading">Course writings</h2>
+        <p className="mt-2 text-sm" style={{ color: '#7a6a58' }}>
           These papers are course-specific. They sometimes touch my frameworks, but they are not
           dissertation chapters. I am posting them to document development and invite feedback.
         </p>
@@ -88,8 +86,8 @@ export default function DashboardPage() {
       </section>
 
       {/* Current courses */}
-      <section className="rounded-3xl border border-stone-300 bg-stone-50 p-6 md:p-8">
-        <h2 className="text-2xl font-semibold text-stone-900">Current courses</h2>
+      <section className="panel">
+        <h2 className="section-heading">Current courses</h2>
         <div className="mt-4 grid gap-6 md:grid-cols-2">
           <Card title="EDUC 820 (A/B/C): Writing a Literature Review">
             <p>
@@ -121,8 +119,8 @@ export default function DashboardPage() {
       </section>
 
       {/* Active work */}
-      <section className="rounded-3xl border border-stone-300 bg-stone-50 p-6 md:p-8">
-        <h2 className="text-2xl font-semibold text-stone-900">Active work</h2>
+      <section className="panel">
+        <h2 className="section-heading">Active work</h2>
         <div className="mt-4 grid gap-6 md:grid-cols-2">
           <Card title="Writing in progress">
             <p>
@@ -145,11 +143,12 @@ export default function DashboardPage() {
           </Card>
         </div>
       </section>
+
     </div>
   )
 }
 
-/* --- Presentational helpers --- */
+/* --- Helpers --- */
 
 function QuickLink({
   title,
@@ -165,14 +164,24 @@ function QuickLink({
   return (
     <Link
       href={href}
-      className={`block rounded-2xl border border-stone-300 p-4 transition ${
+      className="block rounded-2xl p-4 transition"
+      style={
         muted
-          ? 'bg-stone-100 hover:bg-stone-200 opacity-60 cursor-default pointer-events-none'
-          : 'bg-white hover:bg-stone-100'
-      }`}
+          ? {
+              background: '#ede8de',
+              border: '1px solid #d6c8b4',
+              opacity: 0.6,
+              pointerEvents: 'none',
+              cursor: 'default',
+            }
+          : {
+              background: '#fff8ef',
+              border: '1px solid #d6c8b4',
+            }
+      }
     >
-      <p className="font-semibold text-stone-900">{title}</p>
-      <p className="mt-1 text-sm text-stone-700">{desc}</p>
+      <p style={{ fontWeight: 500, color: '#2c2c1a', fontSize: '14px' }}>{title}</p>
+      <p className="mt-1 text-sm" style={{ color: '#7a6a58' }}>{desc}</p>
     </Link>
   )
 }
@@ -188,12 +197,16 @@ function Card({
 }) {
   return (
     <div
-      className={`rounded-2xl border border-stone-300 p-4 ${
-        tint ? 'bg-amber-50' : 'bg-white'
-      }`}
+      className="rounded-2xl p-4"
+      style={{
+        background: tint ? '#f0ebe0' : '#fff8ef',
+        border: '1px solid #d6c8b4',
+      }}
     >
-      <p className="font-semibold text-stone-900">{title}</p>
-      <div className="mt-2 text-stone-700">{children}</div>
+      <p style={{ fontWeight: 500, color: '#2c2c1a', fontFamily: "'Lora', Georgia, serif" }}>
+        {title}
+      </p>
+      <div className="mt-2 text-sm" style={{ color: '#7a6a58' }}>{children}</div>
     </div>
   )
 }

@@ -1,5 +1,6 @@
 /**
- * Integration: Stitching ENDT, XIK-TD, and Belief Space
+ * Integration: Stitching ENDT, XIK-TS, and Belief Space
+ * Updated: XIK-TD renamed to XIK-TS throughout.
  * Style aligned to ENDT/XIK pages (cards, borders, spacing)
  * No em dashes
  */
@@ -10,17 +11,20 @@ export default function IntegrationPage() {
       {/* Header */}
       <section className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8 shadow-sm">
         <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
-          Integration: Stitching ENDT, XIK-TD, and Belief Space
+          Integration: Stitching ENDT, XIK-TS, and Belief Space
         </h1>
         <p className="mt-3 text-lg text-slate-800">
           This page shows how the three lenses work together as a single design framework.
           ENDT describes the institutional system that sends signals and records outcomes.
-          XIK-TD models the learner loop that transforms experience into knowledge under identity constraints.
+          XIK-TS models the learner loop that transforms experience into knowledge through
+          identity acting as a reagent, and describes the Transformation Space in which
+          the transfer function of that process becomes visible.
           Belief Space captures how communities stabilize shared meanings, anchors, and trajectories.
         </p>
         <p className="mt-2 text-slate-800 text-sm">
           Design goal: improve reliability and transfer while lowering hidden costs,
-          especially for learners marginalized by current pathways.
+          especially for learners whose Transformation Space has been structurally constrained
+          by current institutional pathways.
         </p>
       </section>
 
@@ -28,7 +32,7 @@ export default function IntegrationPage() {
       <section className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
         <h2 className="text-2xl font-semibold">0) Vocabulary: Fermiate</h2>
         <Definition term="Fermiate (noun)">
-          <p>A disciplined, bounded inference step inspired by Enrico Fermi’s estimation style.</p>
+          <p>A disciplined, bounded inference step inspired by Enrico Fermi's estimation style.</p>
           <ul className="list-disc pl-5">
             <li><span className="font-medium">Assumptions</span>: written explicitly in one line.</li>
             <li><span className="font-medium">Estimate</span>: order of magnitude or back of the envelope.</li>
@@ -36,7 +40,7 @@ export default function IntegrationPage() {
             <li><span className="font-medium">Validity</span>: where the estimate holds and where it breaks.</li>
             <li><span className="font-medium">Next move</span>: one adjacent step if results are promising.</li>
           </ul>
-          <p className="text-xs mt-2">Verb: “to fermiate.” Plural: “Fermiates.”</p>
+          <p className="text-xs mt-2">Verb: "to fermiate." Plural: "Fermiates."</p>
         </Definition>
       </section>
 
@@ -54,9 +58,11 @@ export default function IntegrationPage() {
           </Card>
           <Card title="Learner level" tint>
             <p className="text-slate-800">
-              XIK-TD models <span className="font-medium">K = f(X, I, B)</span>.
-              Experience is transformed into knowledge through identity acting as an epistemic operator.
-              Identity cost, time debt, and translation tax can pull the loop downward.
+              XIK-TS models <span className="font-medium">K = f(X, I)</span>.
+              Experience is transformed into knowledge through identity acting as a reagent.
+              The Transformation Space describes the boundary of what is thinkable and reachable
+              at any given moment -- the higher-level abstraction that makes the transfer
+              function of the identity system visible.
             </p>
           </Card>
           <Card title="Community level">
@@ -76,19 +82,22 @@ export default function IntegrationPage() {
           <Card title="Interfaces">
             <ul className="list-disc pl-5 text-slate-800 space-y-1">
               <li>
-                <span className="font-medium">ENDT → XIK-TD</span>.
+                <span className="font-medium">ENDT to XIK-TS</span>.
                 Institutional signals become inputs to the learner loop.
-                Changing signals and available transitions changes learning conditions.
+                Changing signals and available transitions changes the conditions
+                under which the ontological-to-epistemic transformation can occur.
               </li>
               <li>
-                <span className="font-medium">XIK-TD → Belief Space</span>.
+                <span className="font-medium">XIK-TS to Belief Space</span>.
                 Learner outputs and artifacts enter public records and discourse,
-                shifting shared anchors and norms.
+                shifting shared anchors and norms. Expanded Transformation Spaces
+                eventually reshape what the community treats as legitimate knowledge.
               </li>
               <li>
-                <span className="font-medium">Belief Space → ENDT</span>.
+                <span className="font-medium">Belief Space to ENDT</span>.
                 Stabilized anchors such as competency transcripts and micro grants
-                can be adopted as policy or practice.
+                can be adopted as policy or practice, changing the institutional
+                signals that shape future transformation conditions.
               </li>
             </ul>
           </Card>
@@ -118,7 +127,8 @@ export default function IntegrationPage() {
             <p className="text-slate-800">
               Make frames explicit, lower risk, and scaffold method use.
               Counter example rounds and revision tokens normalize change
-              without status loss.
+              without status loss. Design for productive identity dissonance
+              within systems that support synthesis.
             </p>
           </Card>
           <Card title="Stabilize community anchors">
@@ -140,7 +150,6 @@ export default function IntegrationPage() {
           and proof of work as primary signals.
           The goal is not replacement, but added entries and exits that reduce exclusion and delay.
         </p>
-        {/* rest unchanged */}
       </section>
 
       {/* 5) Measurement */}
@@ -151,13 +160,12 @@ export default function IntegrationPage() {
           Logs and counters indicate feasibility and uptake,
           not causal proof.
         </p>
-        {/* rest unchanged */}
       </section>
 
-      {/* 6 and 7 unchanged */}
     </div>
   )
 }
+
 function Card({
   title,
   children,
@@ -174,6 +182,7 @@ function Card({
     </div>
   )
 }
+
 function Definition({
   term,
   children,

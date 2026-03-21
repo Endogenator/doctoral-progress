@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
 /* ------------------------------------------
+   Google Fonts: Lora (headings) + Source Sans 3 (body)
+------------------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@400;500&display=swap');
+
+/* ------------------------------------------
    Base theme hooks
 ------------------------------------------ */
 @theme inline {
@@ -9,44 +14,129 @@
 }
 
 /* ------------------------------------------
-   Global body styling
+   CSS custom properties: olive palette
 ------------------------------------------ */
-body {
-  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system,
-    Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
+:root {
+  --color-olive-deepest:  #1e2010;
+  --color-olive-deep:     #2a2d1a;
+  --color-olive-mid:      #3a3e22;
+  --color-olive-border:   #4a4e2a;
+  --color-olive-accent:   #a0a832;
+  --color-olive-muted:    #60622e;
+  --color-olive-text:     #a8a880;
+  --color-olive-light:    #d8d8a0;
+  --color-olive-cream:    #e0ddc0;
 
-  /* Earth-tone base */
-  background-color: #f4f1ec; /* parchment */
-  color: #2f2f2f; /* charcoal */
+  --color-parchment:      #f5f0e8;
+  --color-card:           #fff8ef;
+  --color-card-border:    #d6c8b4;
+  --color-ink:            #2c2c1a;
+  --color-ink-muted:      #7a6a58;
+  --color-ink-faint:      #a09080;
 }
 
 /* ------------------------------------------
-   Headings: restrained fall palette
+   Global body styling
+------------------------------------------ */
+body {
+  font-family: 'Source Sans 3', ui-sans-serif, system-ui, -apple-system,
+    Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  background-color: var(--color-parchment);
+  color: var(--color-ink);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* ------------------------------------------
+   Headings: Lora serif, olive-ink palette
 ------------------------------------------ */
 @layer base {
-  h1 { @apply text-stone-900; }
-  h2 { @apply text-amber-900; }   /* burnt amber */
-  h3 { @apply text-amber-800; }
-  h4 { @apply text-stone-900; }
+  h1 {
+    font-family: 'Lora', Georgia, serif;
+    color: var(--color-olive-cream);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    font-family: 'Lora', Georgia, serif;
+    color: var(--color-ink);
+    font-weight: 500;
+  }
+  h3 {
+    font-family: 'Lora', Georgia, serif;
+    color: var(--color-ink);
+    font-weight: 500;
+  }
+  h4 {
+    color: var(--color-ink);
+    font-weight: 500;
+  }
 }
 
 /* ------------------------------------------
    Semantic helpers
 ------------------------------------------ */
 @layer components {
-  .subheading { @apply text-amber-900; }
 
+  /* Page header: dark olive band across the top of each page */
+  .page-header {
+    background-color: var(--color-olive-deep);
+    border-radius: 1rem;
+    padding: 1.75rem 2rem;
+  }
+
+  .page-header h1 {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.875rem;
+    font-weight: 600;
+    color: var(--color-olive-cream);
+  }
+
+  .page-header p {
+    color: var(--color-olive-text);
+    margin-top: 0.5rem;
+  }
+
+  /* Section headings with left accent border */
+  .section-heading {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--color-ink);
+    border-left: 3px solid var(--color-olive-accent);
+    padding-left: 0.625rem;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Cards */
   .card {
-    @apply rounded-2xl border border-stone-300 bg-white p-4;
+    background-color: var(--color-card);
+    border: 1px solid var(--color-card-border);
+    border-radius: 1rem;
+    padding: 1rem 1.25rem;
   }
 
   .card-muted {
-    @apply bg-stone-50;
+    background-color: #f0ebe0;
   }
 
+  .card-dark {
+    background-color: var(--color-olive-deep);
+    border-color: var(--color-olive-mid);
+    color: var(--color-olive-cream);
+  }
+
+  /* Panels (outer section wrappers) */
   .panel {
-    @apply rounded-3xl border border-stone-300 bg-white;
+    background-color: var(--color-card);
+    border: 1px solid var(--color-card-border);
+    border-radius: 1.5rem;
+    padding: 1.5rem 2rem;
+  }
+
+  .subheading {
+    color: var(--color-olive-muted);
   }
 }
 
