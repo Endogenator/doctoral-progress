@@ -1,21 +1,22 @@
 /**
- * Integration: Stitching ENDT, XIK-TS, and Belief Space
- * Updated: XIK-TD renamed to XIK-TS throughout.
- * Style aligned to ENDT/XIK pages (cards, borders, spacing)
- * No em dashes
+ * Integration: Stitching ETCS, XIK-TS, and Belief Space
+ * ENDT renamed to ETCS throughout.
+ * Sections 4 and 5 filled with real content.
+ * No em dashes.
  */
 
 export default function IntegrationPage() {
   return (
     <div className="max-w-5xl mx-auto space-y-8">
+
       {/* Header */}
       <section className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8 shadow-sm">
         <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
-          Integration: Stitching ENDT, XIK-TS, and Belief Space
+          Integration: Stitching ETCS, XIK-TS, and Belief Space
         </h1>
         <p className="mt-3 text-lg text-slate-800">
           This page shows how the three lenses work together as a single design framework.
-          ENDT describes the institutional system that sends signals and records outcomes.
+          ETCS describes the institutional system that sends signals and records outcomes.
           XIK-TS models the learner loop that transforms experience into knowledge through
           identity acting as a reagent, and describes the Transformation Space in which
           the transfer function of that process becomes visible.
@@ -50,10 +51,12 @@ export default function IntegrationPage() {
         <div className="mt-4 grid md:grid-cols-3 gap-6">
           <Card title="System level">
             <p className="text-slate-800">
-              ENDT treats schooling as a coordination system.
+              ETCS treats schooling as a coordination system.
               Inputs such as policy, tasks, timing, and rituals
               shape which transitions are available to different learners.
-              Outcomes diverge because identity and context mediate how signals are received.
+              Outcomes diverge because identity and context mediate how signals are received,
+              and the institution cannot observe the full internal state that determines
+              how any given signal is processed.
             </p>
           </Card>
           <Card title="Learner level" tint>
@@ -69,7 +72,9 @@ export default function IntegrationPage() {
             <p className="text-slate-800">
               Belief Space captures shared stabilization.
               Communities converge on focus points such as proof of work and constructor reliability.
-              Subjective frames align through dialogue, artifacts, and records.
+              Subjective frames align through dialogue, artifacts, and records. What a community
+              treats as legitimate knowledge shapes which Transformation Spaces are socially
+              supported and which are isolated.
             </p>
           </Card>
         </div>
@@ -82,7 +87,7 @@ export default function IntegrationPage() {
           <Card title="Interfaces">
             <ul className="list-disc pl-5 text-slate-800 space-y-1">
               <li>
-                <span className="font-medium">ENDT to XIK-TS</span>.
+                <span className="font-medium">ETCS to XIK-TS</span>.
                 Institutional signals become inputs to the learner loop.
                 Changing signals and available transitions changes the conditions
                 under which the ontological-to-epistemic transformation can occur.
@@ -94,9 +99,9 @@ export default function IntegrationPage() {
                 eventually reshape what the community treats as legitimate knowledge.
               </li>
               <li>
-                <span className="font-medium">Belief Space to ENDT</span>.
-                Stabilized anchors such as competency transcripts and micro grants
-                can be adopted as policy or practice, changing the institutional
+                <span className="font-medium">Belief Space to ETCS</span>.
+                Stabilized anchors such as competency transcripts and proof-of-work
+                records can be adopted as policy or practice, changing the institutional
                 signals that shape future transformation conditions.
               </li>
             </ul>
@@ -119,16 +124,18 @@ export default function IntegrationPage() {
           <Card title="Change signals and transitions">
             <p className="text-slate-800">
               Adjust task sequencing, timing, and exits.
-              Replace single high stakes gates with staged proof of work
+              Replace single high-stakes gates with staged proof of work
               and portfolio exits linked to constructor reliability.
+              New signals delivered through unchanged transition structures
+              reproduce the same exclusions.
             </p>
           </Card>
           <Card title="Engineer the loop" tint>
             <p className="text-slate-800">
               Make frames explicit, lower risk, and scaffold method use.
-              Counter example rounds and revision tokens normalize change
+              Counter-example rounds and revision tokens normalize change
               without status loss. Design for productive identity dissonance
-              within systems that support synthesis.
+              within systems that provide sufficient support for synthesis to occur.
             </p>
           </Card>
           <Card title="Stabilize community anchors">
@@ -136,6 +143,8 @@ export default function IntegrationPage() {
               Publish templates for artifacts, run showcases,
               and legitimize competency transcripts
               so new paths become legible to mentors and selectors.
+              A Transformation Space that has no community anchor remains
+              invisible to the people who could validate and extend it.
             </p>
           </Card>
         </div>
@@ -143,22 +152,83 @@ export default function IntegrationPage() {
 
       {/* 4) Worked example */}
       <section className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
-        <h2 className="text-2xl font-semibold">4) Worked example: credential path to skill or venture path</h2>
+        <h2 className="text-2xl font-semibold">4) Worked example: the credential path and the parallel path</h2>
         <p className="mt-2 text-slate-800">
-          Many communities anchor opportunity on degrees and rank.
-          Integration stitches a parallel path that treats constructor reliability
-          and proof of work as primary signals.
-          The goal is not replacement, but added entries and exits that reduce exclusion and delay.
+          Many communities anchor opportunity on degrees and institutional rank. A credential
+          functions as a Belief Space anchor: it signals to selectors that a person has passed
+          through a recognized coordination system and been certified as output. The problem is
+          not that credentials exist. The problem is that credential-as-only-signal excludes
+          learners whose Transformation Space expanded through routes the institution did not
+          design or observe.
         </p>
+        <p className="mt-3 text-slate-800">
+          Integration points toward a parallel path. Rather than replacing the credential system,
+          it adds entries and exits that treat constructor reliability and proof of work as
+          primary signals alongside institutional records. A person who built something real,
+          documented the method, and can explain where it holds and where it breaks has
+          demonstrated transformation. The framework makes that demonstration legible to
+          communities that currently have no vocabulary for it.
+        </p>
+        <div className="mt-4 grid md:grid-cols-2 gap-6">
+          <Card title="What the credential path does well">
+            <ul className="list-disc pl-5 text-slate-800 space-y-1">
+              <li>Provides a legible, intersubjective signal across contexts.</li>
+              <li>Reduces selector uncertainty by standardizing the coordination record.</li>
+              <li>Creates a community of shared reference that lowers coordination costs.</li>
+            </ul>
+          </Card>
+          <Card title="What the parallel path adds" tint>
+            <ul className="list-disc pl-5 text-slate-800 space-y-1">
+              <li>Makes transformation visible when the institution did not observe it.</li>
+              <li>Reduces legibility tax for learners whose knowledge arrived through non-standard routes.</li>
+              <li>Expands the Belief Space anchor set so more transformation trajectories are socially recognizable.</li>
+            </ul>
+          </Card>
+        </div>
       </section>
 
       {/* 5) Measurement */}
       <section className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
         <h2 className="text-2xl font-semibold">5) Measurement without overclaiming</h2>
         <p className="mt-2 text-slate-800">
-          We track observable use, not truth claims.
-          Logs and counters indicate feasibility and uptake,
-          not causal proof.
+          The framework does not produce a measurement instrument. It produces a diagnostic
+          vocabulary. The distinction matters. A measurement instrument claims to quantify
+          a latent variable. A diagnostic vocabulary names what to look for and where to look.
+        </p>
+        <p className="mt-3 text-slate-800">
+          What is observable are outputs at the ETCS level: attendance, credentials, artifacts,
+          participation patterns, attrition rates by learner identity category, time-to-completion
+          distributions. These are not measures of the Transformation Space. They are symptoms
+          of coordination conditions. A high attrition rate at a particular transition point
+          is evidence that the transition is misaligned with the identity architecture of the
+          learners reaching it. It does not tell you why, or for whom specifically, or what
+          to change first.
+        </p>
+        <p className="mt-3 text-slate-800">
+          The XIK-TS level is not directly observable. The Transformation Space of a given
+          learner at a given moment cannot be measured from the outside. What can be observed
+          are proxies: willingness to revise, transfer across contexts, ability to name and
+          shift frames, tolerance for productive dissonance. These proxies are imperfect and
+          context-dependent. The framework is honest about that.
+        </p>
+        <p className="mt-3 text-slate-800">
+          Fermiates are the appropriate epistemic tool here. Make the assumption explicit.
+          Estimate the order of magnitude. Identify the quickest available check. State where
+          the estimate holds and where it breaks. Move one step. That is the level of claim
+          the framework supports.
+        </p>
+      </section>
+
+      {/* Cross-links */}
+      <section className="rounded-2xl border border-slate-200 bg-white p-4">
+        <p className="text-slate-800">
+          See{' '}
+          <a className="text-indigo-700 underline" href="/frameworks/etcs">ETCS</a>{' '}
+          for the institutional coordination system,{' '}
+          <a className="text-indigo-700 underline" href="/frameworks/xik-ts">XIK-TS</a>{' '}
+          for the learner-level transformation loop, and{' '}
+          <a className="text-indigo-700 underline" href="/frameworks/belief-space">Belief Space</a>{' '}
+          for how communities stabilize shared meaning.
         </p>
       </section>
 

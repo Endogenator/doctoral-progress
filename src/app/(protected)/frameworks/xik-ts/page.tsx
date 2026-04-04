@@ -3,7 +3,7 @@
  * Updated from XIK-TD: Transformation Domain renamed to Transformation Space.
  * Identity role updated from "filter/operator" to "reagent."
  * Frequency domain analogy made explicit.
- * Style aligned to ENDT / Belief Space pages.
+ * Cross-link updated: endt -> etcs
  * No em dashes.
  */
 
@@ -140,25 +140,25 @@ export default function XIKTSPage() {
           <div className="rounded-2xl border border-slate-200 p-4">
             <ul className="list-disc pl-5 space-y-2 text-slate-800">
               <li>
-                <span className="font-medium">X -- Experience</span>. Contact with ontological
-                information. Structured signals from events, interactions, tasks, media, and
-                environments across time and source.
+                <span className="font-medium">X(·) Experience process</span>. Structured signals
+                from tasks, media, peers, and instruction across time and source. Experience is
+                the interface between ontological information and the identity reagent.
               </li>
               <li>
-                <span className="font-medium">I -- Identity (reagent)</span>. The system of
-                filters, weightings, and validators that participates in and shapes the
-                transformation reaction. Not a passive filter, not a total determinant. A reagent.
+                <span className="font-medium">I(·) Identity reagent</span>. Roles, norms, and
+                stakes that participate in the transformation of experience into knowledge.
+                Identity shapes relevance, perceived risk, and willingness to revise -- and
+                is itself shaped by the outcomes it produces.
               </li>
               <li>
-                <span className="font-medium">K -- Knowledge</span>. The expansion of what a
-                person can perceive as possible. Stabilized enough to simulate futures, explain
-                causes, or coordinate with others across contexts.
+                <span className="font-medium">K</span>. Knowledge stabilized enough to simulate
+                futures, explain causes, or coordinate with others across contexts. The expansion
+                of K is the expansion of the Transformation Space.
               </li>
               <li>
-                <span className="font-medium">TS -- Transformation Space</span>. The higher-level
-                abstraction. The boundary of what is thinkable and reachable for a given person
-                or system at a given moment. The domain in which the transfer function of the
-                identity system becomes visible.
+                <span className="font-medium">TS</span>. The Transformation Space. The boundary
+                of what is thinkable and reachable at a given moment. The domain in which the
+                transfer function of the identity system becomes visible.
               </li>
             </ul>
           </div>
@@ -169,9 +169,8 @@ export default function XIKTSPage() {
               Experience enters the system. Identity acts as reagent, participating in the
               transformation of experience into knowledge. Knowledge expands the Transformation
               Space, which changes the conditions under which future experience is processed.
-              The loop is recursive and non-deterministic: the same input produces different
-              outputs depending on the state of the identity reagent and the prior shape of
-              the Transformation Space.
+              The loop is recursive: the same input produces different outputs depending on
+              the state of the identity reagent and the prior shape of the Transformation Space.
             </p>
             <p className="mt-2 text-sm text-slate-600">
               The loop can expand toward greater perceptual range and epistemic flexibility,
@@ -281,7 +280,7 @@ export default function XIKTSPage() {
       <section className="rounded-2xl border border-slate-200 bg-white p-4">
         <p className="text-slate-800">
           See{' '}
-          <a className="text-indigo-700 underline" href="/frameworks/endt">ENDT</a>{' '}
+          <a className="text-indigo-700 underline" href="/frameworks/etcs">ETCS</a>{' '}
           for the institutional system that shapes which transformation conditions are available,{' '}
           <a className="text-indigo-700 underline" href="/frameworks/belief-space">Belief Space</a>{' '}
           for how communities stabilize shared meanings and anchors, and{' '}

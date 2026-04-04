@@ -33,7 +33,7 @@ export default async function ProtectedLayout({
   return (
     <div className="md:flex md:min-h-screen bg-stone-100">
       {/* Sidebar */}
-      <div className="md:w-64 md:flex-shrink-0 border-r border-stone-300 bg-stone-200">
+      <div className="md:w-64 md:flex-shrink-0">
         <Sidebar />
       </div>
 

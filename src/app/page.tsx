@@ -4,7 +4,7 @@ import { redirect } from 'next/navigation'
 export default async function HomePage() {
   const { userId } = await auth()
   if (userId) {
-    // Already signed in — skip the old landing and go straight to the dashboard
+    // Already signed in — skip the landing and go straight to the dashboard
     redirect('/dashboard')
   }
 
@@ -13,7 +13,7 @@ export default async function HomePage() {
     <main className="max-w-4xl mx-auto p-8 space-y-6">
       <h1 className="text-3xl font-semibold">Doctoral Progress</h1>
       <p className="text-slate-800">
-        Private workspace for ENDT, XIK-TD, Belief Space, and Integration.
+        Private workspace for ETCS, XIK-TS, Belief Space, and Integration.
       </p>
       <div className="flex gap-3">
         <a
