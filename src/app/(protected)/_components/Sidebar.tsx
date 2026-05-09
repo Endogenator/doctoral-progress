@@ -16,9 +16,9 @@ const navSections: Section[] = [
   {
     title: 'Frameworks',
     items: [
-      { href: '/frameworks/etcs', label: 'ETCS' },
       { href: '/frameworks/xik-ts', label: 'XIK-TS' },
       { href: '/frameworks/belief-space', label: 'Belief Space' },
+      { href: '/frameworks/etcs', label: 'ETCS' },
       { href: '/frameworks/integration', label: 'Integration' },
       { href: '/references', label: 'References' },
     ],
@@ -29,6 +29,7 @@ const navSections: Section[] = [
       { href: '/writings/educ-827', label: 'EDUC 827: Leadership as Alignment Verification' },
       { href: '/writings/educ-829', label: 'EDUC 829: The Belief in Schooling (1890–1958)' },
       { href: '/writings/educ-830', label: 'EDUC 830: Curricular Gatekeeping' },
+      { href: '/writings/educ-831', label: 'EDUC 831: Disruption Without Design' },
     ],
   },
 ]

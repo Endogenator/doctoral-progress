@@ -1,9 +1,8 @@
 /**
  * Dashboard — Doctoral Progress
- * Earth-tone palette
- * ETCS replaces ENDT throughout.
- * Courses updated: 820 A/B/C, 830, 831 current. 827, 829 completed.
- * Writing links: 827, 829 active. 830, 831 in progress (muted).
+ * Earth-tone palette.
+ * Framework quick links reordered: XIK-TS, Belief Space, ETCS, Integration.
+ * 831 writing link active.
  * No em dashes.
  */
 
@@ -20,7 +19,7 @@ export default function DashboardPage() {
         </h1>
         <p className="mt-3 text-lg text-stone-800">
           This site is my working space for building and testing ideas. It documents the ongoing
-          development of three connected frameworks: ETCS, XIK-TS, and Belief Space.
+          development of three connected frameworks: XIK-TS, Belief Space, and ETCS.
         </p>
         <p className="mt-2 text-sm text-stone-700">
           The goal is not polished conclusions. The goal is to make development visible, track
@@ -34,11 +33,6 @@ export default function DashboardPage() {
         <h2 className="text-2xl font-semibold text-stone-900">Quick links</h2>
         <div className="mt-4 grid gap-4 md:grid-cols-2">
           <QuickLink
-            title="ETCS — Education as a Transformative Coordination System"
-            href="/frameworks/etcs"
-            desc="System view: how institutional signals and coordination conditions shape feasible student paths."
-          />
-          <QuickLink
             title="XIK-TS — Experience, Identity, Knowledge Transformation Space"
             href="/frameworks/xik-ts"
             desc="Learner view: how experience becomes knowledge through identity acting as a reagent."
@@ -49,9 +43,14 @@ export default function DashboardPage() {
             desc="Community view: how groups stabilize meaning using shared anchors and norms."
           />
           <QuickLink
-            title="Integration — Stitching the three lenses"
+            title="ETCS — Education as a Transformative Coordination System"
+            href="/frameworks/etcs"
+            desc="Coordination at scale: how institutional signals and reference frame development interact."
+          />
+          <QuickLink
+            title="Integration — Stitching the three frameworks"
             href="/frameworks/integration"
-            desc="How system, learner, and community moves fit together in practice."
+            desc="How individual transformation, community meaning, and coordination at scale fit together."
           />
         </div>
       </section>
@@ -82,8 +81,7 @@ export default function DashboardPage() {
           <QuickLink
             title="EDUC 831 paper"
             href="/writings/educ-831"
-            desc="Education Law, Policy, and Justice: in progress."
-            muted
+            desc="Disruption Without Design: Accreditation Reform as a Natural Experiment in Path Dependence."
           />
         </div>
       </section>

@@ -10,9 +10,9 @@ export default function ReferencesPage() {
           References
         </h1>
         <p className="mt-3 text-lg text-stone-800">
-          Core works that inform ETCS, XIK-TS, and Belief Space. This list grows as the
-          project matures and as coursework and dissertation research surface sources that
-          meaningfully shape or test the framework.
+          Core works that inform XIK-TS, Belief Space, ETCS, and their integration. This
+          list grows as the project matures and as coursework and dissertation research
+          surface sources that meaningfully shape or test the framework.
         </p>
       </section>
 
@@ -40,6 +40,27 @@ export default function ReferencesPage() {
           Emerick, M. R. (2021). Diversity ideology and school leadership: Obscuring
           inequities for emergent bilingual students in career and technical education.{' '}
           <em>Educational Administration Quarterly, 58</em>(2), 223–257.
+        </li>
+      </ReferenceSection>
+
+      {/* Poverty and cognitive function */}
+      <ReferenceSection title="Poverty, cognitive bandwidth, and Belief Space contraction">
+        <li>
+          Dean, E. B., Schilbach, F., &amp; Schofield, H. (2018). Poverty and cognitive
+          function. In C. B. Barrett, M. R. Carter, &amp; J. P. Chavas (Eds.),{' '}
+          <em>The economics of poverty traps</em> (pp. 57–118). University of Chicago Press.
+        </li>
+        <li>
+          Mani, A., Mullainathan, S., Shafir, E., &amp; Zhao, J. (2013). Poverty impedes
+          cognitive function. <em>Science, 341</em>(6149), 976–980.
+        </li>
+      </ReferenceSection>
+
+      {/* Path dependence and institutional lock-in */}
+      <ReferenceSection title="Path dependence and institutional lock-in">
+        <li>
+          Pierson, P. (2000). Increasing returns, path dependence, and the study of
+          politics. <em>American Political Science Review, 94</em>(2), 251–267.
         </li>
       </ReferenceSection>
 
@@ -127,6 +148,16 @@ export default function ReferencesPage() {
             Bernstein and Bourdieu provide the structural and field-level account
             of how educational knowledge codes reproduce themselves. Both inform
             the ETCS analysis of coordination conditions and hidden costs.
+          </li>
+          <li>
+            Dean, Schilbach, and Schofield ground the claim that unmet constraints
+            actively shrink the navigable Belief Space, compressing the planning
+            window and reducing information throughput.
+          </li>
+          <li>
+            Pierson grounds the accreditation analysis in path dependence theory,
+            explaining why correlative meaning systems are self-sealing rather
+            than merely persistent.
           </li>
           <li>
             Formalizations of <strong>X(·)</strong> and the Transformation Space
