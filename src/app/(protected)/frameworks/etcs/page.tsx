@@ -2,12 +2,9 @@
 
 /**
  * ETCS: Education as a Transformative Coordination System
- * Updated: Reference frame language throughout.
- * Three-stage developmental architecture with Hart & Risley.
- * Tuple descriptions updated for Hawkins/Deutsch parallel.
- * Coordination as shared reference frames, not mimicking.
- * Singular purpose problem with specialization feedback loop.
- * Accreditation section removed (moved to writings/applications).
+ * Tuple notation removed throughout.
+ * Automata references removed.
+ * Reference frame language retained and strengthened.
  * No em dashes.
  */
 
@@ -38,10 +35,6 @@ export default function ETCSPage() {
           Rather than assuming fixed outcomes, ETCS focuses on how system design expands or
           constrains the set of transitions available to different learners, and on what those
           constraints reveal about the causal structure underneath institutional surface behavior.
-        </p>
-        <p className="mt-2 text-slate-800 text-sm">
-          We use a compact tuple ⟨Q, Σ, Γ, Δ, I, F⟩ as a legend to name system components.
-          It is a shared vocabulary, not a mathematical requirement.
         </p>
       </section>
 
@@ -124,76 +117,9 @@ export default function ETCSPage() {
         </div>
       </section>
 
-      {/* 2) Model at a glance */}
+      {/* 2) Coordination, not transmission */}
       <section className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
-        <h2 className="text-2xl font-semibold">2) Model at a glance</h2>
-        <p className="mt-2 text-slate-800">
-          The tuple components are intended in terms of the Hawkins/Deutsch parallel. Each
-          names a feature of the coordination system as it operates on reference-frame-based
-          learners navigating a possibility-space-defined environment.
-        </p>
-        <div className="mt-4 grid md:grid-cols-2 gap-6">
-          <div className="rounded-2xl border border-slate-200 p-4">
-            <ul className="list-disc pl-5 space-y-2 text-slate-800">
-              <li>
-                <span className="font-medium">Q (states)</span>. Learner positions that couple
-                knowledge, identity, and agency, understood as the current configuration of
-                reference frames and their combinations. Examples include assimilating,
-                bicultural, certified, stalled, or excluded. These are snapshots of a dynamic
-                coordination state, not fixed categories.
-              </li>
-              <li>
-                <span className="font-medium">Σ (inputs)</span>. Policy and pedagogical signals
-                such as task design, assessment regimes, discipline, rituals, and use of time
-                and space. These are the experiences the institution delivers into the learner's
-                reference frame processing system. The same input produces different outputs
-                because different reference frame architectures process it differently.
-              </li>
-              <li>
-                <span className="font-medium">Γ (outputs)</span>. Records and behaviors such as
-                attendance, artifacts, participation, refusals, and credentials. These are what
-                the institution can observe and record. They are surface expressions of reference
-                frame configurations the institution cannot directly observe.
-              </li>
-              <li>
-                <span className="font-medium">Δ (transitions)</span>. The constrained moves
-                between states, shaped by identity, belief, and institutional rules. A transition
-                that is available to a learner whose reference frame history aligns with
-                institutional assumptions may be structurally unavailable to a learner whose
-                history does not.
-              </li>
-              <li>
-                <span className="font-medium">I / F</span>. Entry legibility and exits such as
-                graduation, certification, redirection, or exclusion. Who is legible at entry
-                and what exits are structurally available are both products of institutional
-                design, reflecting whose reference frame architecture the system was built
-                to recognize.
-              </li>
-            </ul>
-          </div>
-
-          <div className="rounded-2xl border border-slate-200 p-4 bg-slate-50">
-            <h3 className="text-lg font-semibold">Why the tuple</h3>
-            <p className="mt-2 text-slate-800">
-              The tuple notation is borrowed from systems description, where compact notation
-              is used to name states, inputs, and transitions precisely. ETCS uses it as a
-              shared vocabulary for talking about coordination at scale, not as a claim about
-              formal computational structure.
-            </p>
-            <p className="mt-3 text-sm text-slate-700">
-              Example: Input Σ is a high-stakes test. One learner moves toward focused practice.
-              Another moves toward withdrawal. A third moves toward memorization or cheating.
-              The signal is identical. The transitions Δ that are viable depend on the full
-              internal state of each learner, including identity, prior belief, and reference
-              frame history, none of which the test was designed to observe.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 3) Coordination, not transmission */}
-      <section className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
-        <h2 className="text-2xl font-semibold">3) Coordination, not transmission</h2>
+        <h2 className="text-2xl font-semibold">2) Coordination, not transmission</h2>
         <p className="mt-2 text-slate-800">
           The dominant model of education treats it as a content delivery system. A body of
           knowledge exists. Instruction transmits it. Assessment measures how much was received.
@@ -216,11 +142,34 @@ export default function ETCSPage() {
           Stage 1 and Stage 2 history, processed it into something the institution did not
           intend and cannot see.
         </p>
+        <div className="mt-4 grid md:grid-cols-2 gap-6">
+          <div className="rounded-2xl border border-slate-200 p-4 bg-slate-50">
+            <h3 className="text-lg font-semibold">What the institution can observe</h3>
+            <p className="mt-2 text-slate-800">
+              Records and behaviors: attendance, artifacts, participation, refusals, credentials.
+              These are surface expressions of reference frame configurations the institution
+              cannot directly observe. The same output, a passing grade, a completed credential,
+              can reflect transformation or assimilation. The institution has no mechanism for
+              telling them apart.
+            </p>
+          </div>
+          <div className="rounded-2xl border border-slate-200 p-4">
+            <h3 className="text-lg font-semibold">What the institution cannot observe</h3>
+            <p className="mt-2 text-slate-800">
+              The full internal state of the learner: identity architecture, prior reference
+              frame history, current Transformation Space, active constraints on Belief Space.
+              These determine how any given signal is received and processed. A high-stakes
+              test sends one signal. One learner moves toward focused practice. Another toward
+              withdrawal. A third toward memorization or cheating. The signal is identical.
+              The processing is not.
+            </p>
+          </div>
+        </div>
       </section>
 
-      {/* 4) The singular purpose problem */}
+      {/* 3) The singular purpose problem */}
       <section className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
-        <h2 className="text-2xl font-semibold">4) The singular purpose problem</h2>
+        <h2 className="text-2xl font-semibold">3) The singular purpose problem</h2>
         <p className="mt-2 text-slate-800">
           Higher education serves incommensurable purposes simultaneously. Workforce preparation,
           civic formation, personal development, credentialing, research production, and social
@@ -277,9 +226,9 @@ export default function ETCSPage() {
         </p>
       </section>
 
-      {/* 5) Pedagogy as identity shaping */}
+      {/* 4) Pedagogy as identity shaping */}
       <section className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
-        <h2 className="text-2xl font-semibold">5) Pedagogy as identity shaping</h2>
+        <h2 className="text-2xl font-semibold">4) Pedagogy as identity shaping</h2>
         <p className="mt-2 text-slate-800">
           Teaching does more than transmit knowledge. It shapes identity, agency, and the
           sense of what reference frame combinations are legitimate or risky. These effects
@@ -314,9 +263,9 @@ export default function ETCSPage() {
         </ul>
       </section>
 
-      {/* 6) Externalities and hidden costs */}
+      {/* 5) Externalities and hidden costs */}
       <section className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
-        <h2 className="text-2xl font-semibold">6) Externalities and hidden costs</h2>
+        <h2 className="text-2xl font-semibold">5) Externalities and hidden costs</h2>
         <p className="mt-2 text-slate-800">
           ETCS surfaces costs that are routinely externalized to students and communities
           rather than attributed to system design. These costs are real, measurable in
@@ -354,9 +303,9 @@ export default function ETCSPage() {
         </ul>
       </section>
 
-      {/* 7) Practical levers */}
+      {/* 6) Practical levers */}
       <section className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
-        <h2 className="text-2xl font-semibold">7) Practical levers</h2>
+        <h2 className="text-2xl font-semibold">6) Practical levers</h2>
         <p className="mt-2 text-slate-800">
           These are design interventions that target coordination conditions rather than
           individual learner deficits. Each addresses a specific point in the system where

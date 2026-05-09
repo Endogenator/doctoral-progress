@@ -108,33 +108,6 @@ export default function ReferencesPage() {
         </li>
       </ReferenceSection>
 
-      {/* Automata and formal models */}
-      <section className="rounded-3xl border border-stone-300 bg-white p-6 md:p-8 space-y-4">
-        <h2 className="text-2xl font-semibold text-amber-900">
-          Automata and formal models
-        </h2>
-        <ul className="list-disc pl-6 text-stone-900 space-y-1">
-          <li>
-            Hopcroft, J. E., &amp; Ullman, J. D. (1979).{' '}
-            <em>Introduction to Automata Theory, Languages, and Computation</em>.
-            Addison-Wesley.
-          </li>
-          <li>
-            Lamport, L. (2002).{' '}
-            <em>Specifying Systems</em>. Addison-Wesley.
-          </li>
-          <li>
-            Sipser, M. (2012).{' '}
-            <em>Introduction to the Theory of Computation</em> (3rd ed.). Cengage.
-          </li>
-        </ul>
-        <p className="text-sm text-stone-700">
-          Tuple notation from these traditions is used in ETCS strictly as a compact
-          labeling device for naming system components precisely. No prior background
-          in formal language theory is assumed or required.
-        </p>
-      </section>
-
       {/* Notes */}
       <section className="rounded-3xl border border-stone-300 bg-stone-50 p-6 md:p-8">
         <h2 className="text-2xl font-semibold text-amber-900">Notes</h2>
