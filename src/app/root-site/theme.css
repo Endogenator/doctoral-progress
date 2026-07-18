@@ -17,6 +17,18 @@
   min-height: 100vh;
 }
 
+/*
+  Doctorate's globals.css sets a global @layer base rule for h1/h2/h3,
+  meant for its dark olive header band. That stylesheet loads app-wide,
+  so without this override those colors leak in here too (cream-on-sand
+  reads as low contrast). Explicit here, not relying on inheritance.
+*/
+.origin-theme h1,
+.origin-theme h2,
+.origin-theme h3 {
+  color: var(--site-ink);
+}
+
 .origin-theme a {
   color: var(--site-rust);
   text-decoration: underline;
