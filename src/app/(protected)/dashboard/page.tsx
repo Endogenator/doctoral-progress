@@ -1,9 +1,9 @@
 /**
  * Dashboard — Doctoral Progress
- * Earth-tone palette.
- * Framework quick links reordered: XIK-TS, Belief Space, ETCS, Integration.
- * 831 writing link active.
- * No em dashes.
+ * Earth-tone palette. No em dashes.
+ * Frameworks (XIK-TS, Belief Space, ETCS, Integration, etc.) moved to
+ * generative.endogenator.com. This page no longer links to the old
+ * (protected)/frameworks/* routes, which were deleted.
  */
 
 import Link from 'next/link'
@@ -18,39 +18,46 @@ export default function DashboardPage() {
           Doctoral Progress Dashboard
         </h1>
         <p className="mt-3 text-lg text-stone-800">
-          This site is my working space for building and testing ideas. It documents the ongoing
-          development of three connected frameworks: XIK-TS, Belief Space, and ETCS.
+          This site is my working space for doctoral work in the Leadership
+          for Educational Justice program. I am committed to applying my
+          analytical lens to that work, but the lens itself now lives
+          entirely at{' '}
+          <a
+            href="https://endogenator.com"
+            className="underline hover:text-stone-950"
+          >
+            endogenator.com
+          </a>
+          , not here. That separation is deliberate. The ideas developed
+          there function as the a priori for what gets built here, the
+          starting commitments this research proceeds from.
         </p>
         <p className="mt-2 text-sm text-stone-700">
-          The goal is not polished conclusions. The goal is to make development visible, track
-          revisions, and design learning systems with lower hidden costs for students who are
-          excluded or stratified by current structures.
+          The goal here is not polished conclusions. The goal is to make
+          development visible, track revisions, and design learning
+          systems with lower hidden costs for students who are excluded or
+          stratified by current structures.
         </p>
       </section>
 
-      {/* Quick links */}
+      {/* Where the ideas live */}
       <section className="rounded-3xl border border-stone-300 bg-stone-50 p-6 md:p-8">
-        <h2 className="text-2xl font-semibold text-stone-900">Quick links</h2>
+        <h2 className="text-2xl font-semibold text-stone-900">Where the ideas live</h2>
         <div className="mt-4 grid gap-4 md:grid-cols-2">
-          <QuickLink
-            title="XIK-TS — Experience, Identity, Knowledge Transformation Space"
-            href="/frameworks/xik-ts"
-            desc="Learner view: how experience becomes knowledge through identity acting as a reagent."
+          <ExternalLink
+            title="generative.endogenator.com"
+            href="https://generative.endogenator.com"
+            desc="The full theoretical apparatus: Topology, XIK-TS, ETCS, Belief Space, Correctors and Recruiters, Integration, and Generative Coordination itself."
           />
           <QuickLink
-            title="Belief Space — Designing Exploration and Focus Points"
-            href="/frameworks/belief-space"
-            desc="Community view: how groups stabilize meaning using shared anchors and norms."
+            title="Education as a System"
+            href="/education-as-a-system"
+            desc="Where the dissertation is heading, stated plainly, ahead of where the dissertation itself is allowed to go yet."
           />
           <QuickLink
-            title="ETCS — Education as a Transformative Coordination System"
-            href="/frameworks/etcs"
-            desc="Coordination at scale: how institutional signals and reference frame development interact."
-          />
-          <QuickLink
-            title="Integration — Stitching the three frameworks"
-            href="/frameworks/integration"
-            desc="How individual transformation, community meaning, and coordination at scale fit together."
+            title="Pedagogy"
+            href="/pedagogy"
+            desc="General teaching methods and approaches. Genuinely not yet explored."
           />
         </div>
       </section>
@@ -195,6 +202,26 @@ function QuickLink({
       <p className="font-semibold text-stone-900">{title}</p>
       <p className="mt-1 text-sm text-stone-700">{desc}</p>
     </Link>
+  )
+}
+
+function ExternalLink({
+  title,
+  desc,
+  href,
+}: {
+  title: string
+  desc: string
+  href: string
+}) {
+  return (
+    <a
+      href={href}
+      className="block rounded-2xl border border-stone-300 bg-white p-4 transition hover:bg-stone-100"
+    >
+      <p className="font-semibold text-stone-900">{title}</p>
+      <p className="mt-1 text-sm text-stone-700">{desc}</p>
+    </a>
   )
 }
 

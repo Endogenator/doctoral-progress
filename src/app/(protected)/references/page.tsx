@@ -10,9 +10,11 @@ export default function ReferencesPage() {
           References
         </h1>
         <p className="mt-3 text-lg text-stone-800">
-          Core works that inform XIK-TS, Belief Space, ETCS, and their integration. This
-          list grows as the project matures and as coursework and dissertation research
-          surface sources that meaningfully shape or test the framework.
+          Core works that inform Topology, XIK-TS, Belief Space, ETCS,
+          Correctors and Recruiters, and their integration. This list grows
+          as the project matures and as coursework and dissertation
+          research surface sources that meaningfully shape or test the
+          framework.
         </p>
       </section>
 
@@ -44,7 +46,7 @@ export default function ReferencesPage() {
       </ReferenceSection>
 
       {/* Poverty and cognitive function */}
-      <ReferenceSection title="Poverty, cognitive bandwidth, and Belief Space contraction">
+      <ReferenceSection title="Poverty, cognitive bandwidth, and Transformation Space contraction">
         <li>
           Dean, E. B., Schilbach, F., &amp; Schofield, H. (2018). Poverty and cognitive
           function. In C. B. Barrett, M. R. Carter, &amp; J. P. Chavas (Eds.),{' '}
@@ -70,6 +72,11 @@ export default function ReferencesPage() {
           Deutsch, D. (2011).{' '}
           <em>The Beginning of Infinity: Explanations That Transform the World</em>.
           Viking.
+        </li>
+        <li>
+          Sloman, S., &amp; Fernbach, P. (2017).{' '}
+          <em>The Knowledge Illusion: Why We Never Think Alone</em>.
+          Riverhead Books.
         </li>
       </ReferenceSection>
 
@@ -113,29 +120,54 @@ export default function ReferencesPage() {
         <h2 className="text-2xl font-semibold text-amber-900">Notes</h2>
         <ul className="mt-3 list-disc pl-6 text-stone-900 space-y-1">
           <li>
-            Identity Economics motivates the explicit identity term{' '}
-            <strong>I(·)</strong> and the treatment of identity as a reagent
-            rather than a passive filter in XIK-TS.
+            Identity Economics is now more central than earlier notes here
+            gave it credit for. Akerlof and Kranton&apos;s fit measure, how
+            well a person&apos;s own characteristics match a category&apos;s
+            prescribed ideal, is read directly as permeability, the
+            mechanism governing whether belief crosses between a person and
+            a given region of Belief Space. This replaced an earlier
+            treatment of identity as a reagent with an explicit I(·)
+            function, which has been retired.
           </li>
           <li>
-            Bernstein and Bourdieu provide the structural and field-level account
-            of how educational knowledge codes reproduce themselves. Both inform
-            the ETCS analysis of coordination conditions and hidden costs.
+            Bernstein and Bourdieu provide the structural and field-level
+            account of how educational knowledge codes reproduce
+            themselves. Both inform ETCS&apos;s account of institutions as
+            recruiters, spreading a coordination target at scale, and the
+            structural reasons the correcting half of that pair scales far
+            less easily.
           </li>
           <li>
-            Dean, Schilbach, and Schofield ground the claim that unmet constraints
-            actively shrink the navigable Belief Space, compressing the planning
-            window and reducing information throughput.
+            Dean, Schilbach, and Schofield ground the claim that unmet
+            constraints narrow what actually populates Transformation
+            Space. The mechanism is more specific than originally noted
+            here: Belief Space itself doesn&apos;t contract. Permeability
+            into it narrows under load, so reference frames that remain
+            fully intact simply stop being deployed while a constraint is
+            active.
           </li>
           <li>
-            Pierson grounds the accreditation analysis in path dependence theory,
-            explaining why correlative meaning systems are self-sealing rather
-            than merely persistent.
+            Pierson grounds the accreditation analysis in path dependence
+            theory. Self-sealing correlative systems look close to what
+            crystallization now describes at the individual level,
+            permeability narrowed and kept narrow because an anchored
+            belief is being protected, not because evidence keeps
+            confirming it.
           </li>
           <li>
-            Formalizations of <strong>X(·)</strong> and the Transformation Space
-            will be released as working papers or preprints as the dissertation
-            develops.
+            Barrett is carried here from an earlier stage of the project.
+            Affect has consistently been kept out of the framework as a
+            theoretical primitive, and nothing currently built draws on
+            this citation directly. Flagged rather than removed, pending a
+            decision on whether it still has a place.
+          </li>
+          <li>
+            The earlier formalizations promised here, X(·) and
+            Transformation Space as a function, belonged to the retired
+            reagent framing and won&apos;t be appearing as such. What
+            remains genuinely unformalized is distance itself, the
+            transformation-count and substrate-count metrics proposed in
+            Topology. That proof is still outstanding.
           </li>
         </ul>
       </section>

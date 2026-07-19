@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 import { SignedIn, UserButton } from '@clerk/nextjs'
 import { useState } from 'react'
 
-type Item = { href: string; label: string }
+type Item = { href: string; label: string; external?: boolean }
 type Section = { title: string; items: Item[] }
 
 const navSections: Section[] = [
@@ -14,13 +14,21 @@ const navSections: Section[] = [
     items: [{ href: '/dashboard', label: 'Dashboard' }],
   },
   {
-    title: 'Frameworks',
+    title: 'My work',
     items: [
-      { href: '/frameworks/xik-ts', label: 'XIK-TS' },
-      { href: '/frameworks/belief-space', label: 'Belief Space' },
-      { href: '/frameworks/etcs', label: 'ETCS' },
-      { href: '/frameworks/integration', label: 'Integration' },
+      { href: '/education-as-a-system', label: 'Education as a System' },
+      { href: '/pedagogy', label: 'Pedagogy' },
       { href: '/references', label: 'References' },
+    ],
+  },
+  {
+    title: 'Theory',
+    items: [
+      {
+        href: 'https://generative.endogenator.com',
+        label: 'generative.endogenator.com',
+        external: true,
+      },
     ],
   },
   {
@@ -112,31 +120,44 @@ export default function Sidebar() {
               <ul className="space-y-0.5">
                 {section.items.map((item) => {
                   const active =
-                    pathname === item.href || pathname?.startsWith(item.href + '/')
+                    !item.external &&
+                    (pathname === item.href || pathname?.startsWith(item.href + '/'))
+
+                  const linkStyle = active
+                    ? {
+                        background: '#3a3e22',
+                        color: '#d8d8a0',
+                        fontWeight: 500,
+                        borderLeft: '3px solid #a0a832',
+                        paddingLeft: '9px',
+                      }
+                    : {
+                        color: '#a8a880',
+                      }
 
                   return (
                     <li key={item.href}>
-                      <Link
-                        href={item.href}
-                        aria-current={active ? 'page' : undefined}
-                        className="block rounded-lg px-3 py-2 text-sm transition"
-                        style={
-                          active
-                            ? {
-                                background: '#3a3e22',
-                                color: '#d8d8a0',
-                                fontWeight: 500,
-                                borderLeft: '3px solid #a0a832',
-                                paddingLeft: '9px',
-                              }
-                            : {
-                                color: '#a8a880',
-                              }
-                        }
-                        onClick={() => setOpen(false)}
-                      >
-                        {item.label}
-                      </Link>
+                      {item.external ? (
+                        <a
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block rounded-lg px-3 py-2 text-sm transition"
+                          style={linkStyle}
+                        >
+                          {item.label}
+                        </a>
+                      ) : (
+                        <Link
+                          href={item.href}
+                          aria-current={active ? 'page' : undefined}
+                          className="block rounded-lg px-3 py-2 text-sm transition"
+                          style={linkStyle}
+                          onClick={() => setOpen(false)}
+                        >
+                          {item.label}
+                        </Link>
+                      )}
                     </li>
                   )
                 })}
