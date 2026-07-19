@@ -247,14 +247,18 @@ export default function TopologyPage() {
             </p>
             <p>
               Permeability doesn&apos;t only operate between people. It
-              operates between facets within a single person&apos;s
-              identity too. Someone in real tension with themselves, a
-              facet that resents another facet they also hold, shows
-              permeability failing intrapersonally, in exactly the same way
-              it can fail between two separate people. Interpersonal
-              resonance failure and internal conflict may be the same
-              mechanism, observed at different scales, though that&apos;s a
-              thread still being pulled rather than something settled.
+              also varies within a single person&apos;s identity, across
+              different domains or functions of that same complex system,
+              rather than between discrete parts. Someone in real tension
+              with themselves shows permeability behaving differently
+              across different regions of one system, open in one domain,
+              closed in another, not two separate pieces in conflict but
+              one system exhibiting inconsistent permeability across its
+              own functions. Interpersonal resonance failure and this kind
+              of internal inconsistency may be expressions of the same
+              underlying mechanism, observed at different scales, though
+              that&apos;s a thread still being pulled rather than something
+              settled.
             </p>
           </Section>
 
